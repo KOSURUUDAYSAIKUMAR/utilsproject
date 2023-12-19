@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomHeaderView" customModule="Utils" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSj-K1-VsQ" userLabel="Header">
+                    <rect key="frame" x="0.0" y="0.0" width="413" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXd-TN-6TY">
+                            <rect key="frame" x="10.000000000000004" y="0.0" width="44.333333333333343" height="40"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" name="AccentColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="SXd-TN-6TY" firstAttribute="leading" secondItem="vSj-K1-VsQ" secondAttribute="leading" constant="10" id="eGh-4r-UbC"/>
+                        <constraint firstItem="SXd-TN-6TY" firstAttribute="top" secondItem="vSj-K1-VsQ" secondAttribute="top" id="kfv-5q-qYO"/>
+                        <constraint firstAttribute="bottom" secondItem="SXd-TN-6TY" secondAttribute="bottom" id="lSu-Lp-TnL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vSj-K1-VsQ" secondAttribute="trailing" id="CUf-5l-Phd"/>
+                <constraint firstItem="vSj-K1-VsQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="L4V-DK-4K5"/>
+                <constraint firstAttribute="bottom" secondItem="vSj-K1-VsQ" secondAttribute="bottom" id="oYY-ZX-HtX"/>
+                <constraint firstItem="vSj-K1-VsQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rY7-ih-ei5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerTitle" destination="SXd-TN-6TY" id="wmZ-N1-wEu"/>
+            </connections>
+            <point key="canvasLocation" x="148.85496183206106" y="-73.591549295774655"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
