@@ -13,11 +13,13 @@ protocol CustomeHeaderViewDelegate: AnyObject {
 
 class CustomHeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var arrowOutlet: UIButton!
     weak var delegate: CustomeHeaderViewDelegate?
     var sectionNumber: Int!
     
     required init?(coder aDecoder: NSCoder) {
        super.init(coder: aDecoder)
+        addBorderAndColor(color: .white, width: 1, corner_radius: 5, clipsToBounds: true)
        let gesture = UITapGestureRecognizer(target: self, action: #selector(CustomHeaderView.tableViewSectionTapped(_:)))
        self.addGestureRecognizer(gesture)
        let backgroundView = UIView(frame: self.bounds)
@@ -26,6 +28,7 @@ class CustomHeaderView: UITableViewHeaderFooterView {
    }
 
    @objc func tableViewSectionTapped(_ gesture: UIGestureRecognizer) {
+       arrowOutlet.isSelected.toggle()
        delegate?.headerViewTap(self.sectionNumber)
    }
     

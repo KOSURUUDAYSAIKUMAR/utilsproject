@@ -24,9 +24,19 @@
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-zY-rRv">
+                            <rect key="frame" x="380" y="7.6666666666666679" width="25" height="25.000000000000004"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="ITU-jI-pgF"/>
+                                <constraint firstAttribute="width" constant="25" id="UeQ-QT-N2I"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="RDh-zY-rRv" secondAttribute="trailing" constant="8" id="TNl-AF-8A3"/>
+                        <constraint firstItem="RDh-zY-rRv" firstAttribute="centerY" secondItem="vSj-K1-VsQ" secondAttribute="centerY" id="WY7-VU-1MC"/>
                         <constraint firstItem="SXd-TN-6TY" firstAttribute="leading" secondItem="vSj-K1-VsQ" secondAttribute="leading" constant="10" id="eGh-4r-UbC"/>
                         <constraint firstItem="SXd-TN-6TY" firstAttribute="top" secondItem="vSj-K1-VsQ" secondAttribute="top" id="kfv-5q-qYO"/>
                         <constraint firstAttribute="bottom" secondItem="SXd-TN-6TY" secondAttribute="bottom" id="lSu-Lp-TnL"/>
@@ -43,9 +53,10 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="arrowOutlet" destination="RDh-zY-rRv" id="CMM-Wk-0Dc"/>
                 <outlet property="headerTitle" destination="SXd-TN-6TY" id="wmZ-N1-wEu"/>
             </connections>
-            <point key="canvasLocation" x="148.85496183206106" y="-73.591549295774655"/>
+            <point key="canvasLocation" x="148.85496183206106" y="-73.943661971830991"/>
         </view>
     </objects>
     <resources>

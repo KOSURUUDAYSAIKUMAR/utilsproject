@@ -52,7 +52,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="369.66666666666669" height="129"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="ndy-mQ-YDQ" firstAttribute="leading" secondItem="CU3-O0-d8O" secondAttribute="leading" id="Eqn-62-WCT"/>
                                             <constraint firstAttribute="trailing" secondItem="ndy-mQ-YDQ" secondAttribute="trailing" id="FQJ-0B-V9a"/>
@@ -84,6 +84,7 @@
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9KX-WE-AIU">
                                                 <rect key="frame" x="0.0" y="0.0" width="369.66666666666669" height="530"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,7 +96,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="WPl-po-dJy" firstAttribute="leading" secondItem="CU3-O0-d8O" secondAttribute="trailing" id="DR8-FQ-fK7"/>
                                     <constraint firstItem="KDH-Go-OdP" firstAttribute="leading" secondItem="zG7-Hw-YAQ" secondAttribute="trailing" id="Kb1-rl-pNl"/>
@@ -123,7 +124,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n20-0d-t1G" secondAttribute="bottom" id="JdC-oW-2Sj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n20-0d-t1G" secondAttribute="trailing" id="QvG-kQ-Jyu"/>
@@ -150,6 +151,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

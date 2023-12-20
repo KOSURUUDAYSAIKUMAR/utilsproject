@@ -25,6 +25,7 @@ class ValidationTableViewCell: UITableViewCell {
     @IBOutlet weak var dropDownTextField: UITextField!
     
     @IBOutlet weak var dropDown: UIView!
+    @IBOutlet weak var submitView: UIView!
     var validate = Validate()
     var delegate: BaseVCProtocol?
     let centeredDropDown = DropDown()
@@ -34,12 +35,22 @@ class ValidationTableViewCell: UITableViewCell {
     }()
     
     @IBAction func dropDown(_ sender: Any) {
+        if let confirmText = confirmPasswordTextField.text, let passwordText = passwordTextField.text, confirmText == passwordText {
+            confirmPasswordTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+        } else if let age = confirmPasswordTextField.text, age.count <= 0 {
+            print("Empty details")
+            confirmPasswordTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+        } else {
+            confirmPasswordTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
+            delegate?.showAlert?(msg: "Confirm password doesnot match")
+        }
         centeredDropDown.show()
         dropDownHandler()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        submitView.addBorderAndColor(color: UIColor.systemBlue, width: 1, corner_radius: 5, clipsToBounds: true)
         dropDowns.forEach { $0.dismissMode = .onTap }
         dropDowns.forEach { $0.direction = .any }
         // Initialization code
@@ -77,8 +88,38 @@ class ValidationTableViewCell: UITableViewCell {
                 dropDownTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
                 print("The string is empty or contains only whitespace characters.")
             }
+            centeredDropDown.hide()
         }
     }
+    
+    @IBAction func submitHandler(_ sender: Any) {
+        if areAllTextFieldsEmpty() {
+            delegate?.showAlert?(msg: "All textfields are required")
+        } else if dropDownTextFieldsEmpty() {
+            delegate?.showAlert?(msg: "Drop down text should not be empty")
+            dropDownTextField.text = "Field can't be empty"
+            dropDownTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
+        } else {
+            delegate?.showAlert?(msg: "Submit Successfully")
+        }
+    }
+    
+    func areAllTextFieldsEmpty() -> Bool {
+        // Check if all text fields are empty
+        return nameTextField.text?.isEmpty ?? true &&
+        ageTextField.text?.isEmpty ?? true &&
+        mailTextField.text?.isEmpty ?? true &&
+        mobileTextField.text?.isEmpty ?? true &&
+        otpTextField.text?.isEmpty ?? true &&
+        passwordTextField.text?.isEmpty ?? true &&
+        confirmPasswordTextField.text?.isEmpty ?? true &&
+        dropDownTextField.text?.isEmpty ?? true
+    }
+    
+    func dropDownTextFieldsEmpty() -> Bool {
+        return  dropDownTextField.text?.isEmpty ?? true
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state

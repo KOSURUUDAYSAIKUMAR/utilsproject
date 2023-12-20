@@ -50,8 +50,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-       
-        return 75.0
+        return 40.0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -59,6 +58,11 @@ extension ViewController: UITableViewDelegate {
         headerView.headerTitle.text = self.currentList[section].title
         headerView.sectionNumber = section
         headerView.delegate = self
+        if currentList[section].isExpand {
+            headerView.arrowOutlet.setImage(UIImage(named: "Disclosure_Arrow_1"), for: .normal)
+        } else {
+            headerView.arrowOutlet.setImage(UIImage(named: "Closure_Arrow_1"), for: .normal)
+        }
         return headerView
     }
 }
