@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3595E0302B32BED000B00C86 /* AlertDialogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3595E02E2B32BED000B00C86 /* AlertDialogTableViewCell.swift */; };
+		3595E0312B32BED000B00C86 /* AlertDialogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3595E02F2B32BED000B00C86 /* AlertDialogTableViewCell.xib */; };
 		35B0902C2B3193CE00CD765A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0902B2B3193CE00CD765A /* AppDelegate.swift */; };
 		35B0902E2B3193CE00CD765A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0902D2B3193CE00CD765A /* SceneDelegate.swift */; };
 		35B090302B3193CE00CD765A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B0902F2B3193CE00CD765A /* ViewController.swift */; };
@@ -32,6 +34,19 @@
 		35B090882B31C11000CD765A /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090802B31C11000CD765A /* DropDown.swift */; };
 		35B090892B31C11000CD765A /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090812B31C11000CD765A /* DropDownCell.swift */; };
 		35B0908A2B31C11000CD765A /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090822B31C11000CD765A /* DropDown+Appearance.swift */; };
+		35C710C72B32CAC6004DBBC2 /* CustomDropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710C52B32CAC6004DBBC2 /* CustomDropDownCell.swift */; };
+		35C710C82B32CAC6004DBBC2 /* CustomDropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C710C62B32CAC6004DBBC2 /* CustomDropDownCell.xib */; };
+		35C710CB2B32F3F6004DBBC2 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710C92B32F3F6004DBBC2 /* CustomAlertViewController.swift */; };
+		35C710CC2B32F3F6004DBBC2 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C710CA2B32F3F6004DBBC2 /* CustomAlertViewController.xib */; };
+		35C710D02B331492004DBBC2 /* ReachabilitySwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710CF2B331492004DBBC2 /* ReachabilitySwift.swift */; };
+		35C710D22B33151C004DBBC2 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710D12B33151C004DBBC2 /* NetworkModel.swift */; };
+		35D681EC2B32C84C00E0CD3F /* DropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D681EA2B32C84C00E0CD3F /* DropDownViewController.swift */; };
+		35D681ED2B32C84C00E0CD3F /* DropDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D681EB2B32C84C00E0CD3F /* DropDownViewController.xib */; };
+		35FA12E72B340A1F00FEC83B /* PopUpPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12E62B340A1F00FEC83B /* PopUpPresentationController.swift */; };
+		35FA12EE2B34243100FEC83B /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12ED2B34243100FEC83B /* Button+Extension.swift */; };
+		35FA12F12B3425A200FEC83B /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12EF2B3425A200FEC83B /* GenderViewController.swift */; };
+		35FA12F22B3425A200FEC83B /* GenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35FA12F02B3425A200FEC83B /* GenderViewController.xib */; };
+		35FA12F42B34349C00FEC83B /* AlertHelperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12F32B34349C00FEC83B /* AlertHelperModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3595E02E2B32BED000B00C86 /* AlertDialogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogTableViewCell.swift; sourceTree = "<group>"; };
+		3595E02F2B32BED000B00C86 /* AlertDialogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertDialogTableViewCell.xib; sourceTree = "<group>"; };
 		35B090282B3193CE00CD765A /* Utils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B0902B2B3193CE00CD765A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35B0902D2B3193CE00CD765A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +98,19 @@
 		35B090802B31C11000CD765A /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		35B090812B31C11000CD765A /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		35B090822B31C11000CD765A /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		35C710C52B32CAC6004DBBC2 /* CustomDropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownCell.swift; sourceTree = "<group>"; };
+		35C710C62B32CAC6004DBBC2 /* CustomDropDownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropDownCell.xib; sourceTree = "<group>"; };
+		35C710C92B32F3F6004DBBC2 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		35C710CA2B32F3F6004DBBC2 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
+		35C710CF2B331492004DBBC2 /* ReachabilitySwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilitySwift.swift; sourceTree = "<group>"; };
+		35C710D12B33151C004DBBC2 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		35D681EA2B32C84C00E0CD3F /* DropDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewController.swift; sourceTree = "<group>"; };
+		35D681EB2B32C84C00E0CD3F /* DropDownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownViewController.xib; sourceTree = "<group>"; };
+		35FA12E62B340A1F00FEC83B /* PopUpPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpPresentationController.swift; sourceTree = "<group>"; };
+		35FA12ED2B34243100FEC83B /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
+		35FA12EF2B3425A200FEC83B /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		35FA12F02B3425A200FEC83B /* GenderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderViewController.xib; sourceTree = "<group>"; };
+		35FA12F32B34349C00FEC83B /* AlertHelperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelperModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +138,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3595E02D2B32BEAE00B00C86 /* Alert Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				3595E02E2B32BED000B00C86 /* AlertDialogTableViewCell.swift */,
+				3595E02F2B32BED000B00C86 /* AlertDialogTableViewCell.xib */,
+			);
+			path = "Alert Dialogs";
+			sourceTree = "<group>";
+		};
+		3595E0322B32BEF000B00C86 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				35D681EA2B32C84C00E0CD3F /* DropDownViewController.swift */,
+				35D681EB2B32C84C00E0CD3F /* DropDownViewController.xib */,
+				35C710C52B32CAC6004DBBC2 /* CustomDropDownCell.swift */,
+				35C710C62B32CAC6004DBBC2 /* CustomDropDownCell.xib */,
+			);
+			path = CustomAlertView;
+			sourceTree = "<group>";
+		};
 		35B0901F2B3193CE00CD765A = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +218,7 @@
 		35B0905B2B319AA700CD765A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3595E02D2B32BEAE00B00C86 /* Alert Dialogs */,
 				35B090692B31A0FB00CD765A /* Validation */,
 				35B0905E2B319CD500CD765A /* HeaderView */,
 			);
@@ -196,6 +247,8 @@
 			children = (
 				35B090672B319F7A00CD765A /* DataItem.swift */,
 				35B0906E2B31AAC100CD765A /* Validate.swift */,
+				35FA12F32B34349C00FEC83B /* AlertHelperModel.swift */,
+				35C710D12B33151C004DBBC2 /* NetworkModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				35B090712B31AD3000CD765A /* Regex.swift */,
+				35FA12E62B340A1F00FEC83B /* PopUpPresentationController.swift */,
+				35FA12ED2B34243100FEC83B /* Button+Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -220,7 +275,11 @@
 		35B090752B31C0F200CD765A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35FA12E82B34212D00FEC83B /* CustomLayout */,
+				35C710CE2B331477004DBBC2 /* Network Connection */,
+				3595E0322B32BEF000B00C86 /* CustomAlertView */,
 				35B090762B31C11000CD765A /* DropDown */,
+				35C710CD2B32F70C004DBBC2 /* ImageAlert */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -261,6 +320,32 @@
 				35B090822B31C11000CD765A /* DropDown+Appearance.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		35C710CD2B32F70C004DBBC2 /* ImageAlert */ = {
+			isa = PBXGroup;
+			children = (
+				35C710C92B32F3F6004DBBC2 /* CustomAlertViewController.swift */,
+				35C710CA2B32F3F6004DBBC2 /* CustomAlertViewController.xib */,
+			);
+			path = ImageAlert;
+			sourceTree = "<group>";
+		};
+		35C710CE2B331477004DBBC2 /* Network Connection */ = {
+			isa = PBXGroup;
+			children = (
+				35C710CF2B331492004DBBC2 /* ReachabilitySwift.swift */,
+			);
+			path = "Network Connection";
+			sourceTree = "<group>";
+		};
+		35FA12E82B34212D00FEC83B /* CustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				35FA12EF2B3425A200FEC83B /* GenderViewController.swift */,
+				35FA12F02B3425A200FEC83B /* GenderViewController.xib */,
+			);
+			path = CustomLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,12 +452,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C710CC2B32F3F6004DBBC2 /* CustomAlertViewController.xib in Resources */,
+				35FA12F22B3425A200FEC83B /* GenderViewController.xib in Resources */,
 				35B090832B31C11000CD765A /* DropDownCell.xib in Resources */,
+				3595E0312B32BED000B00C86 /* AlertDialogTableViewCell.xib in Resources */,
 				35B090622B319D3B00CD765A /* Header.xib in Resources */,
 				35B090382B3193CF00CD765A /* LaunchScreen.storyboard in Resources */,
 				35B0906D2B31A11800CD765A /* ValidationTableViewCell.xib in Resources */,
+				35C710C82B32CAC6004DBBC2 /* CustomDropDownCell.xib in Resources */,
 				35B090352B3193CF00CD765A /* Assets.xcassets in Resources */,
 				35B090332B3193CE00CD765A /* Main.storyboard in Resources */,
+				35D681ED2B32C84C00E0CD3F /* DropDownViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,18 +489,28 @@
 			files = (
 				35B0906F2B31AAC100CD765A /* Validate.swift in Sources */,
 				35B090862B31C11000CD765A /* DPDUIView+Extension.swift in Sources */,
+				35C710D02B331492004DBBC2 /* ReachabilitySwift.swift in Sources */,
+				35FA12F12B3425A200FEC83B /* GenderViewController.swift in Sources */,
 				35B090602B319D0400CD765A /* CustomHeaderView.swift in Sources */,
 				35B090682B319F7A00CD765A /* DataItem.swift in Sources */,
+				35FA12F42B34349C00FEC83B /* AlertHelperModel.swift in Sources */,
 				35B090842B31C11000CD765A /* DPDKeyboardListener.swift in Sources */,
 				35B090302B3193CE00CD765A /* ViewController.swift in Sources */,
 				35B0902C2B3193CE00CD765A /* AppDelegate.swift in Sources */,
 				35B090852B31C11000CD765A /* DPDConstants.swift in Sources */,
 				35B090742B31B4B400CD765A /* BaseViewController.swift in Sources */,
+				35FA12E72B340A1F00FEC83B /* PopUpPresentationController.swift in Sources */,
+				3595E0302B32BED000B00C86 /* AlertDialogTableViewCell.swift in Sources */,
 				35B090722B31AD3000CD765A /* Regex.swift in Sources */,
 				35B090892B31C11000CD765A /* DropDownCell.swift in Sources */,
 				35B090652B319F5800CD765A /* Provider.swift in Sources */,
+				35C710D22B33151C004DBBC2 /* NetworkModel.swift in Sources */,
 				35B0908A2B31C11000CD765A /* DropDown+Appearance.swift in Sources */,
+				35C710C72B32CAC6004DBBC2 /* CustomDropDownCell.swift in Sources */,
 				35B0902E2B3193CE00CD765A /* SceneDelegate.swift in Sources */,
+				35C710CB2B32F3F6004DBBC2 /* CustomAlertViewController.swift in Sources */,
+				35FA12EE2B34243100FEC83B /* Button+Extension.swift in Sources */,
+				35D681EC2B32C84C00E0CD3F /* DropDownViewController.swift in Sources */,
 				35B090882B31C11000CD765A /* DropDown.swift in Sources */,
 				35B0906C2B31A11800CD765A /* ValidationTableViewCell.swift in Sources */,
 			);

@@ -19,6 +19,7 @@ class ValidationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var otpTextField: UITextField!
     
+    @IBOutlet weak var pinCodeTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var confirmPasswordTextField: UITextField!
@@ -64,7 +65,7 @@ class ValidationTableViewCell: UITableViewCell {
         otpTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
-        
+        pinCodeTextField.delegate = self
       //  textLabel?.text = self.currentList[indexPath.section].dataList[indexPath.row]
     }
     
@@ -113,11 +114,18 @@ class ValidationTableViewCell: UITableViewCell {
         otpTextField.text?.isEmpty ?? true &&
         passwordTextField.text?.isEmpty ?? true &&
         confirmPasswordTextField.text?.isEmpty ?? true &&
-        dropDownTextField.text?.isEmpty ?? true
+        dropDownTextField.text?.isEmpty ?? true &&
+        pinCodeTextField.text?.isEmpty ?? true
     }
     
     func dropDownTextFieldsEmpty() -> Bool {
-        return  dropDownTextField.text?.isEmpty ?? true
+        if let text = dropDownTextField.text {
+            if text.isEmpty {
+                return true
+            }
+            return validate.isValidateDropDown(text: dropDownTextField.text ?? "", compareText: Regex.emptyFields)
+        }
+        return false
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -141,7 +149,7 @@ extension ValidationTableViewCell: UITextFieldDelegate {
                 delegate?.showAlert?(msg: "Invalid name")
             }
         case ageTextField:
-            if let age = ageTextField.text, age.count >= 0, !age.contains(" "), let _ = Int(age) {
+            if let age = ageTextField.text?.trimmed(), validate.ageCount(text: age) {
                 ageTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else if let age = ageTextField.text, age.count <= 0 {
                 print("Empty details")
@@ -161,24 +169,31 @@ extension ValidationTableViewCell: UITextFieldDelegate {
                 mailTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
             }
         case mobileTextField:
-            if let text = mobileTextField.text, text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil, text.count >= 10 {
+            if let text = mobileTextField.text, validate.numberValidation(text: text), validate.mobileNumberCount(text: text), validate.isValidMobileNumber(text: text) {
                 mobileTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else if let age = mobileTextField.text, age.count <= 0 {
-                print("Empty details")
                 mobileTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else {
                 mobileTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
                 delegate?.showAlert?(msg: "Invalid Mobile Number")
             }
         case otpTextField:
-            if let text = otpTextField.text, text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil, !text.contains(" "), let otp = Int(text), text.count == 4, Set(String(otp)).count != 1 {
+            if let text = otpTextField.text?.trimmed(), validate.numberValidation(text: text), let otp = Int(text), validate.otpTextCount(text: text), Set(String(otp)).count != 1 {
                 otpTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else if let age = otpTextField.text, age.count <= 0 {
-                print("Empty details")
                 otpTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else {
                 otpTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
                 delegate?.showAlert?(msg: "Invalid OTP")
+            }
+        case pinCodeTextField:
+            if let text = pinCodeTextField.text, validate.isValidPIN(text: text), validate.pinCodeCount(text: text) {
+                pinCodeTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+            } else if let age = pinCodeTextField.text, age.count <= 0 {
+                pinCodeTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+            } else {
+                pinCodeTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
+                delegate?.showAlert?(msg: "Invalid Pin Code")
             }
         case passwordTextField:
             if let text = passwordTextField.text, validate.hasUpperCase(text), validate.hasNumber(text), validate.hasSymbol(text), text.count >= 8 {
@@ -202,6 +217,17 @@ extension ValidationTableViewCell: UITextFieldDelegate {
             }
         default:
             return
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        switch textField {
+        case mobileTextField:
+            return validate.numberAllowedCharacteristics(text: string)
+        case pinCodeTextField:
+            return validate.pinCodeAllowedText(text: string)
+        default:
+            return true
         }
     }
 }

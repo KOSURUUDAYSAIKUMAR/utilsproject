@@ -23,6 +23,11 @@ class Validate: NSObject {
         return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
     }
     
+    // MARK: - Age
+    func ageCount(text: String) -> Bool {
+        return text.count == 2
+    }
+    
     // Helper methods for password validation
     func hasUpperCase(_ text: String) -> Bool {
         return text.rangeOfCharacter(from: .uppercaseLetters) != nil
@@ -35,6 +40,62 @@ class Validate: NSObject {
     func hasSymbol(_ text: String) -> Bool {
         let symbolCharacterSet = CharacterSet(charactersIn: "!@#$%^&*()")
         return text.rangeOfCharacter(from: symbolCharacterSet) != nil
+    }
+    
+    // MARK: - Mobile number validate
+    func numberValidation(text: String) -> Bool {
+        return text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+    }
+    func mobileNumberCount(text: String) -> Bool {
+        return text.count >= 10
+    }
+    func isValidMobileNumber(text: String) -> Bool {
+        let mobileNumberRegex = Regex.mobileNumber
+        let predicate = NSPredicate(format: "SELF MATCHES %@", mobileNumberRegex)
+        return predicate.evaluate(with: text)
+    }
+    func numberAllowedCharacteristics(text: String) -> Bool {
+        let allowedCharacters = CharacterSet(charactersIn: Regex.numbers)
+        let characterSet = CharacterSet(charactersIn: text)
+        return allowedCharacters.isSuperset(of: characterSet)
+    }
+    
+    // MARK: - OTP
+    func otpTextCount(text: String) -> Bool {
+        return text.count == 4
+    }
+    
+    // MARK: - Pin Code
+    func isValidPIN(text: String) -> Bool {
+        let pinRegex = Regex.validPin
+        let predicate = NSPredicate(format: "SELF MATCHES %@", pinRegex)
+        let isSixDigits = predicate.evaluate(with: text)
+        let invalidPrefixes = ["15","29", "35", "54", "55", "65", "66"]
+        let startsWithInvalidPrefix = invalidPrefixes.contains { text.hasPrefix($0) }
+        return isSixDigits && !startsWithInvalidPrefix
+    }
+    
+    func pinCodeCount(text:String) -> Bool {
+        return text.count == 6
+    }
+    
+    func pinCodeAllowedText(text: String) -> Bool {
+        let allowedCharacters = CharacterSet(charactersIn: Regex.numbers)
+        let characterSet = CharacterSet(charactersIn: text)
+        return allowedCharacters.isSuperset(of: characterSet)
+    }
+    
+    // MARK: - Device ID.
+    func getDeviceID() -> String {
+        if let uuid = UIDevice.current.identifierForVendor {
+            return uuid.uuidString
+        }
+        return ""
+    }
+    
+    // MARK: - Drop Down text Static
+    func isValidateDropDown(text: String, compareText: String) -> Bool {
+        return text == compareText
     }
 }
 

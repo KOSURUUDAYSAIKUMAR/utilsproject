@@ -13,7 +13,7 @@ class Provider: NSObject {
     static let shared = Provider()
     
     func addDataItem(withTitle title: String, list:[String]) {
-        let item = DataItem(isExpand: true, title: title, list: list)
+        let item = DataItem(isExpand: false, title: title, list: list)
         self.currentList.append(item)
     }
     

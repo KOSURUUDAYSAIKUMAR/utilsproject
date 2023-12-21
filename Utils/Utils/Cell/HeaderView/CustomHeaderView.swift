@@ -32,6 +32,11 @@ class CustomHeaderView: UITableViewHeaderFooterView {
        delegate?.headerViewTap(self.sectionNumber)
    }
     
+    @IBAction func arrowHandler(_ sender: Any) {
+        arrowOutlet.isSelected.toggle()
+        delegate?.headerViewTap(self.sectionNumber)
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
