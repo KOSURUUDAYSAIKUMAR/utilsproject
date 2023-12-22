@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CZT-4i-p2c">
-                        <rect key="frame" x="0.0" y="5" width="312" height="45"/>
+                        <rect key="frame" x="0.0" y="10" width="312" height="45"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK4-dp-2cj">
                                 <rect key="frame" x="0.0" y="0.0" width="312" height="45"/>
@@ -48,7 +48,7 @@
                     <constraint firstAttribute="trailing" secondItem="CZT-4i-p2c" secondAttribute="trailing" id="HVV-ST-s22"/>
                     <constraint firstItem="CZT-4i-p2c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XQq-je-Dv3"/>
                     <constraint firstAttribute="bottom" secondItem="CZT-4i-p2c" secondAttribute="bottom" id="sgr-k3-GCa"/>
-                    <constraint firstItem="CZT-4i-p2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="uB6-w0-mLT"/>
+                    <constraint firstItem="CZT-4i-p2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uB6-w0-mLT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

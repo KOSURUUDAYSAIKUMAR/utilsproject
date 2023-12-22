@@ -48,16 +48,24 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CU3-O0-d8O" userLabel="Carousel">
                                         <rect key="frame" x="11.666666666666657" y="40" width="369.66666666666674" height="129"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider1" translatesAutoresizingMaskIntoConstraints="NO" id="ndy-mQ-YDQ">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgi-LM-jSq" customClass="Carousel" customModule="Utils" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="369.66666666666669" height="129"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider1" translatesAutoresizingMaskIntoConstraints="NO" id="ndy-mQ-YDQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="369.66666666666669" height="129"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="dgi-LM-jSq" firstAttribute="top" secondItem="CU3-O0-d8O" secondAttribute="top" id="9py-f1-AYR"/>
                                             <constraint firstItem="ndy-mQ-YDQ" firstAttribute="leading" secondItem="CU3-O0-d8O" secondAttribute="leading" id="Eqn-62-WCT"/>
                                             <constraint firstAttribute="trailing" secondItem="ndy-mQ-YDQ" secondAttribute="trailing" id="FQJ-0B-V9a"/>
+                                            <constraint firstAttribute="bottom" secondItem="dgi-LM-jSq" secondAttribute="bottom" id="JWC-ZO-8R1"/>
+                                            <constraint firstAttribute="trailing" secondItem="dgi-LM-jSq" secondAttribute="trailing" id="gs0-I8-5Aj"/>
                                             <constraint firstAttribute="bottom" secondItem="ndy-mQ-YDQ" secondAttribute="bottom" id="jP3-m4-X46"/>
                                             <constraint firstItem="ndy-mQ-YDQ" firstAttribute="top" secondItem="CU3-O0-d8O" secondAttribute="top" id="kST-OO-TYI"/>
+                                            <constraint firstItem="dgi-LM-jSq" firstAttribute="leading" secondItem="CU3-O0-d8O" secondAttribute="leading" id="nMM-kU-mUt"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIU-9o-Peu" userLabel="Network Message">
@@ -135,6 +143,7 @@
                     <connections>
                         <outlet property="networkMsg" destination="JgE-KD-IpU" id="ETZ-iv-nPQ"/>
                         <outlet property="utilTBView" destination="9KX-WE-AIU" id="714-fV-eHB"/>
+                        <outlet property="zkCarousel" destination="dgi-LM-jSq" id="BY2-jD-Kl7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

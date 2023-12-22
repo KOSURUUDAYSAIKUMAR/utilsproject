@@ -8,8 +8,9 @@
 import UIKit
 
 @objc protocol AlertDialogDelegate: AnyObject {
-    @objc optional func alertButtonTag(tag: Int)
+    @objc func alertButtonTag(tag: Int)
     @objc optional func alertButtonTagYN(tag: String)
+    @objc func progressBar(tag:Int)
 }
 
 class AlertDialogTableViewCell: UITableViewCell {
@@ -17,19 +18,25 @@ class AlertDialogTableViewCell: UITableViewCell {
     @IBOutlet weak var alertOutlet: UIButton!
     
     weak var delegate : AlertDialogDelegate?
-    
+    var section = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         alertOutlet.addBorderAndColor(color: .systemBlue, width: 1, corner_radius: 5, clipsToBounds: true)
         // Initialization code
     }
 
-    func setupUI(data: String) {
+    func setupUI(data: String, tag: Int) {
         alertOutlet.setTitle(data, for: .normal)
+        section = tag
     }
     
     @IBAction func alertHandler(_ sender: UIButton) {
-        delegate?.alertButtonTag?(tag: sender.tag)
+        switch section {
+        case 1:
+            delegate?.alertButtonTag(tag: sender.tag)
+        default:
+            delegate?.progressBar(tag: sender.tag)
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -11,9 +11,16 @@ class ViewController: BaseViewController {
 
     @IBOutlet weak var utilTBView: UITableView!
     
+    @IBOutlet weak var zkCarousel: Carousel!
     @IBOutlet weak var networkMsg: UILabel!
     var currentList = [DataItem]()
     var selectedItem: DataItem?
+    
+    let centeredDropDown = DropDown()
+ 
+    lazy var dropDowns: [DropDown] = {
+        return [centeredDropDown]
+    }()
     
     var vm: ViewModel = ViewModel()
     override func viewDidLoad() {
@@ -21,6 +28,7 @@ class ViewController: BaseViewController {
         vm.network = self
         // Do any additional setup after loading the view.
         setupTableview()
+        setupCarouselSlideShow()
         vm.isCheckNetworkHandler()
     }
 
@@ -30,10 +38,24 @@ class ViewController: BaseViewController {
         utilTBView.register(UINib(nibName: "Header", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
         utilTBView.register(UINib(nibName: "ValidationTableViewCell", bundle: nil), forCellReuseIdentifier: "ValidationTableViewCell")
         utilTBView.register(UINib(nibName: "AlertDialogTableViewCell", bundle: nil), forCellReuseIdentifier: "AlertDialogTableViewCell")
+        utilTBView.register(UINib(nibName: "DateCalendarTableViewCell", bundle: nil), forCellReuseIdentifier: "DateCalendarTableViewCell")
         
         Provider.shared.addDataItem(withTitle: "Mandatory Field Validations", list: [])
         Provider.shared.addDataItem(withTitle: "View All Alert Dialog", list: ["Ok Alert Dialog", "Yes/No Alert Dialog", "Custom Icon Alert Dialog", "Custom Icon Yes/No Alert Dialog", "Custom Layout Alert Dialog", "Custom ListView in Alert Dialog"])
+        Provider.shared.addDataItem(withTitle: "View all progress dialogue", list: ["Normal Progress Dialogue","Custom Progress Dialogue"])
+        Provider.shared.addDataItem(withTitle: "View Date and Calendar", list: [])
         currentList = Provider.shared.ideaListItems()
+    }
+    
+    func setupCarouselSlideShow() {
+        var carousel = [CarouselSlide]()
+        for slide in 0...3 {
+            carousel.append(CarouselSlide(image: UIImage(named: "slider" + "\(slide)") ?? UIImage()))
+        }
+        zkCarousel.addBorderAndColor(color: .white, width: 1, corner_radius: 20, clipsToBounds: true)
+        zkCarousel.slides = carousel
+        zkCarousel.interval = 1
+        zkCarousel.start()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,7 +135,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let item = self.currentList[section] as DataItem
         switch section {
-        case 0:
+        case 0, 3:
             return 1
         default:
             return item.dataList.count
@@ -129,12 +151,16 @@ extension ViewController: UITableViewDataSource {
      //        cell.textLabel?.text = self.currentList[indexPath.section].dataList[indexPath.row]
              cell.setUI(with: indexPath.row)
              return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "DateCalendarTableViewCell", for: indexPath) as? DateCalendarTableViewCell else { return UITableViewCell() }
+            cell.dateDelegate = self
+            return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlertDialogTableViewCell", for: indexPath) as?  AlertDialogTableViewCell
              else { return UITableViewCell() }
             cell.alertOutlet.tag = indexPath.row
             cell.delegate = self
-             cell.setupUI(data: currentList[indexPath.section].dataList[indexPath.row])
+            cell.setupUI(data: currentList[indexPath.section].dataList[indexPath.row], tag: indexPath.section)
              return cell
         }
     }
@@ -195,6 +221,15 @@ extension ViewController: AlertDialogDelegate {
         print(tag)
         dismiss(animated: true, completion: nil)
     }
+    
+    func progressBar(tag: Int) {
+        let popupViewController = ProgressViewController()
+        popupViewController.delegate = self
+        popupViewController.progressTag = tag
+        popupViewController.modalPresentationStyle = .custom
+        popupViewController.transitioningDelegate = self
+        present(popupViewController, animated: true, completion: nil)
+    }
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {
@@ -216,5 +251,17 @@ extension ViewController: ViewModelDelegate {
 extension ViewController: GenderDelegate {
     func radioButtonSelect(text: String) {
         print(text)
+    }
+}
+
+extension ViewController: ProgressDelegate {
+    func isProgressAnimate(status: Bool) {
+        print(status ? "Start" : "Stop")
+    }
+}
+
+extension ViewController: DateFormatDelegate {
+    func dateFilteredCases(date: [String]) {
+        print(date, "date filtered selected")
     }
 }

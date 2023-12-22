@@ -34,6 +34,7 @@
 		35B090882B31C11000CD765A /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090802B31C11000CD765A /* DropDown.swift */; };
 		35B090892B31C11000CD765A /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090812B31C11000CD765A /* DropDownCell.swift */; };
 		35B0908A2B31C11000CD765A /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090822B31C11000CD765A /* DropDown+Appearance.swift */; };
+		35B8AA132B355E8C0012ABB3 /* ColorConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8AA122B355E8C0012ABB3 /* ColorConfigure.swift */; };
 		35C710C72B32CAC6004DBBC2 /* CustomDropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710C52B32CAC6004DBBC2 /* CustomDropDownCell.swift */; };
 		35C710C82B32CAC6004DBBC2 /* CustomDropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C710C62B32CAC6004DBBC2 /* CustomDropDownCell.xib */; };
 		35C710CB2B32F3F6004DBBC2 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710C92B32F3F6004DBBC2 /* CustomAlertViewController.swift */; };
@@ -47,6 +48,18 @@
 		35FA12F12B3425A200FEC83B /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12EF2B3425A200FEC83B /* GenderViewController.swift */; };
 		35FA12F22B3425A200FEC83B /* GenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35FA12F02B3425A200FEC83B /* GenderViewController.xib */; };
 		35FA12F42B34349C00FEC83B /* AlertHelperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12F32B34349C00FEC83B /* AlertHelperModel.swift */; };
+		35FA12F62B3447C200FEC83B /* ProgressDialogue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12F52B3447C200FEC83B /* ProgressDialogue.swift */; };
+		35FA12FD2B344C2700FEC83B /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12FB2B344C2700FEC83B /* ProgressViewController.swift */; };
+		35FA12FE2B344C2700FEC83B /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35FA12FC2B344C2700FEC83B /* ProgressViewController.xib */; };
+		35FA13002B345B9200FEC83B /* AJProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12FF2B345B9200FEC83B /* AJProgressView.swift */; };
+		35FA13032B3466F500FEC83B /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA13022B3466F500FEC83B /* Carousel.swift */; };
+		35FA13052B34672400FEC83B /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA13042B34672400FEC83B /* CarouselCell.swift */; };
+		35FA13072B34674D00FEC83B /* CarouselSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA13062B34674D00FEC83B /* CarouselSlide.swift */; };
+		35FA13092B34687500FEC83B /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA13082B34687500FEC83B /* Image+Extension.swift */; };
+		35FA130D2B3470AB00FEC83B /* DateCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA130B2B3470AB00FEC83B /* DateCalendarTableViewCell.swift */; };
+		35FA130E2B3470AB00FEC83B /* DateCalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35FA130C2B3470AB00FEC83B /* DateCalendarTableViewCell.xib */; };
+		35FA13112B34763600FEC83B /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA13102B34763600FEC83B /* Enumerations.swift */; };
+		35FA13132B3476E100FEC83B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA13122B3476E100FEC83B /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +111,7 @@
 		35B090802B31C11000CD765A /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		35B090812B31C11000CD765A /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		35B090822B31C11000CD765A /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		35B8AA122B355E8C0012ABB3 /* ColorConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConfigure.swift; sourceTree = "<group>"; };
 		35C710C52B32CAC6004DBBC2 /* CustomDropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownCell.swift; sourceTree = "<group>"; };
 		35C710C62B32CAC6004DBBC2 /* CustomDropDownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropDownCell.xib; sourceTree = "<group>"; };
 		35C710C92B32F3F6004DBBC2 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +125,18 @@
 		35FA12EF2B3425A200FEC83B /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		35FA12F02B3425A200FEC83B /* GenderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenderViewController.xib; sourceTree = "<group>"; };
 		35FA12F32B34349C00FEC83B /* AlertHelperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelperModel.swift; sourceTree = "<group>"; };
+		35FA12F52B3447C200FEC83B /* ProgressDialogue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDialogue.swift; sourceTree = "<group>"; };
+		35FA12FB2B344C2700FEC83B /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		35FA12FC2B344C2700FEC83B /* ProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		35FA12FF2B345B9200FEC83B /* AJProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AJProgressView.swift; sourceTree = "<group>"; };
+		35FA13022B3466F500FEC83B /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
+		35FA13042B34672400FEC83B /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		35FA13062B34674D00FEC83B /* CarouselSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselSlide.swift; sourceTree = "<group>"; };
+		35FA13082B34687500FEC83B /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		35FA130B2B3470AB00FEC83B /* DateCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalendarTableViewCell.swift; sourceTree = "<group>"; };
+		35FA130C2B3470AB00FEC83B /* DateCalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCalendarTableViewCell.xib; sourceTree = "<group>"; };
+		35FA13102B34763600FEC83B /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		35FA13122B3476E100FEC83B /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +173,7 @@
 			path = "Alert Dialogs";
 			sourceTree = "<group>";
 		};
-		3595E0322B32BEF000B00C86 /* CustomAlertView */ = {
+		3595E0322B32BEF000B00C86 /* CustomPopOver */ = {
 			isa = PBXGroup;
 			children = (
 				35D681EA2B32C84C00E0CD3F /* DropDownViewController.swift */,
@@ -155,7 +181,7 @@
 				35C710C52B32CAC6004DBBC2 /* CustomDropDownCell.swift */,
 				35C710C62B32CAC6004DBBC2 /* CustomDropDownCell.xib */,
 			);
-			path = CustomAlertView;
+			path = CustomPopOver;
 			sourceTree = "<group>";
 		};
 		35B0901F2B3193CE00CD765A = {
@@ -218,6 +244,7 @@
 		35B0905B2B319AA700CD765A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				35FA130F2B3470B000FEC83B /* DateCalendar */,
 				3595E02D2B32BEAE00B00C86 /* Alert Dialogs */,
 				35B090692B31A0FB00CD765A /* Validation */,
 				35B0905E2B319CD500CD765A /* HeaderView */,
@@ -265,9 +292,14 @@
 		35B090702B31AD1F00CD765A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				35FA12F72B3447C800FEC83B /* ProgressDialogue */,
 				35B090712B31AD3000CD765A /* Regex.swift */,
 				35FA12E62B340A1F00FEC83B /* PopUpPresentationController.swift */,
 				35FA12ED2B34243100FEC83B /* Button+Extension.swift */,
+				35FA13082B34687500FEC83B /* Image+Extension.swift */,
+				35FA13102B34763600FEC83B /* Enumerations.swift */,
+				35FA13122B3476E100FEC83B /* Date+Extension.swift */,
+				35B8AA122B355E8C0012ABB3 /* ColorConfigure.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -275,9 +307,12 @@
 		35B090752B31C0F200CD765A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35FA130A2B34708200FEC83B /* DateCalandar */,
+				35FA13012B3466A500FEC83B /* Carousel */,
+				35FA12F82B344BEB00FEC83B /* Progress */,
 				35FA12E82B34212D00FEC83B /* CustomLayout */,
 				35C710CE2B331477004DBBC2 /* Network Connection */,
-				3595E0322B32BEF000B00C86 /* CustomAlertView */,
+				3595E0322B32BEF000B00C86 /* CustomPopOver */,
 				35B090762B31C11000CD765A /* DropDown */,
 				35C710CD2B32F70C004DBBC2 /* ImageAlert */,
 			);
@@ -346,6 +381,50 @@
 				35FA12F02B3425A200FEC83B /* GenderViewController.xib */,
 			);
 			path = CustomLayout;
+			sourceTree = "<group>";
+		};
+		35FA12F72B3447C800FEC83B /* ProgressDialogue */ = {
+			isa = PBXGroup;
+			children = (
+				35FA12F52B3447C200FEC83B /* ProgressDialogue.swift */,
+				35FA12FF2B345B9200FEC83B /* AJProgressView.swift */,
+			);
+			path = ProgressDialogue;
+			sourceTree = "<group>";
+		};
+		35FA12F82B344BEB00FEC83B /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				35FA12FB2B344C2700FEC83B /* ProgressViewController.swift */,
+				35FA12FC2B344C2700FEC83B /* ProgressViewController.xib */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		35FA13012B3466A500FEC83B /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				35FA13022B3466F500FEC83B /* Carousel.swift */,
+				35FA13042B34672400FEC83B /* CarouselCell.swift */,
+				35FA13062B34674D00FEC83B /* CarouselSlide.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		35FA130A2B34708200FEC83B /* DateCalandar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DateCalandar;
+			sourceTree = "<group>";
+		};
+		35FA130F2B3470B000FEC83B /* DateCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				35FA130B2B3470AB00FEC83B /* DateCalendarTableViewCell.swift */,
+				35FA130C2B3470AB00FEC83B /* DateCalendarTableViewCell.xib */,
+			);
+			path = DateCalendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,12 +536,14 @@
 				35B090832B31C11000CD765A /* DropDownCell.xib in Resources */,
 				3595E0312B32BED000B00C86 /* AlertDialogTableViewCell.xib in Resources */,
 				35B090622B319D3B00CD765A /* Header.xib in Resources */,
+				35FA130E2B3470AB00FEC83B /* DateCalendarTableViewCell.xib in Resources */,
 				35B090382B3193CF00CD765A /* LaunchScreen.storyboard in Resources */,
 				35B0906D2B31A11800CD765A /* ValidationTableViewCell.xib in Resources */,
 				35C710C82B32CAC6004DBBC2 /* CustomDropDownCell.xib in Resources */,
 				35B090352B3193CF00CD765A /* Assets.xcassets in Resources */,
 				35B090332B3193CE00CD765A /* Main.storyboard in Resources */,
 				35D681ED2B32C84C00E0CD3F /* DropDownViewController.xib in Resources */,
+				35FA12FE2B344C2700FEC83B /* ProgressViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,28 +570,39 @@
 			files = (
 				35B0906F2B31AAC100CD765A /* Validate.swift in Sources */,
 				35B090862B31C11000CD765A /* DPDUIView+Extension.swift in Sources */,
+				35FA13002B345B9200FEC83B /* AJProgressView.swift in Sources */,
+				35FA13032B3466F500FEC83B /* Carousel.swift in Sources */,
+				35FA12F62B3447C200FEC83B /* ProgressDialogue.swift in Sources */,
+				35FA12FD2B344C2700FEC83B /* ProgressViewController.swift in Sources */,
+				35B8AA132B355E8C0012ABB3 /* ColorConfigure.swift in Sources */,
 				35C710D02B331492004DBBC2 /* ReachabilitySwift.swift in Sources */,
 				35FA12F12B3425A200FEC83B /* GenderViewController.swift in Sources */,
 				35B090602B319D0400CD765A /* CustomHeaderView.swift in Sources */,
 				35B090682B319F7A00CD765A /* DataItem.swift in Sources */,
 				35FA12F42B34349C00FEC83B /* AlertHelperModel.swift in Sources */,
+				35FA13092B34687500FEC83B /* Image+Extension.swift in Sources */,
 				35B090842B31C11000CD765A /* DPDKeyboardListener.swift in Sources */,
 				35B090302B3193CE00CD765A /* ViewController.swift in Sources */,
 				35B0902C2B3193CE00CD765A /* AppDelegate.swift in Sources */,
+				35FA130D2B3470AB00FEC83B /* DateCalendarTableViewCell.swift in Sources */,
 				35B090852B31C11000CD765A /* DPDConstants.swift in Sources */,
+				35FA13132B3476E100FEC83B /* Date+Extension.swift in Sources */,
 				35B090742B31B4B400CD765A /* BaseViewController.swift in Sources */,
 				35FA12E72B340A1F00FEC83B /* PopUpPresentationController.swift in Sources */,
 				3595E0302B32BED000B00C86 /* AlertDialogTableViewCell.swift in Sources */,
 				35B090722B31AD3000CD765A /* Regex.swift in Sources */,
 				35B090892B31C11000CD765A /* DropDownCell.swift in Sources */,
 				35B090652B319F5800CD765A /* Provider.swift in Sources */,
+				35FA13052B34672400FEC83B /* CarouselCell.swift in Sources */,
 				35C710D22B33151C004DBBC2 /* NetworkModel.swift in Sources */,
 				35B0908A2B31C11000CD765A /* DropDown+Appearance.swift in Sources */,
 				35C710C72B32CAC6004DBBC2 /* CustomDropDownCell.swift in Sources */,
 				35B0902E2B3193CE00CD765A /* SceneDelegate.swift in Sources */,
+				35FA13112B34763600FEC83B /* Enumerations.swift in Sources */,
 				35C710CB2B32F3F6004DBBC2 /* CustomAlertViewController.swift in Sources */,
 				35FA12EE2B34243100FEC83B /* Button+Extension.swift in Sources */,
 				35D681EC2B32C84C00E0CD3F /* DropDownViewController.swift in Sources */,
+				35FA13072B34674D00FEC83B /* CarouselSlide.swift in Sources */,
 				35B090882B31C11000CD765A /* DropDown.swift in Sources */,
 				35B0906C2B31A11800CD765A /* ValidationTableViewCell.swift in Sources */,
 			);

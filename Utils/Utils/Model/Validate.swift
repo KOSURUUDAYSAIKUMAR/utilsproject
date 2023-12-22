@@ -97,6 +97,27 @@ class Validate: NSObject {
     func isValidateDropDown(text: String, compareText: String) -> Bool {
         return text == compareText
     }
+    
+    // MARK: - Text View editable
+    func textViewTextCount(text: String) -> Bool {
+        return text.count >= 100
+    }
+    
+    func textviewEditable(text: String, range: NSRange) {
+        let currentText = text as NSString
+        let newText = currentText.replacingCharacters(in: range, with: text)
+        let _ = textViewTextCount(text: newText)
+        textViewCalculateSpaces(newText: newText)
+    }
+    
+    func textViewCalculateSpaces(newText: String) {
+        let totalSpaces = newText.components(separatedBy: " ").count - 1
+        let totalLetters = newText.components(separatedBy: CharacterSet.letters.inverted).joined().count
+        let totalNumbers = newText.components(separatedBy: CharacterSet.decimalDigits.inverted).joined().count
+        print("Total Spaces: \(totalSpaces)")
+        print("Total Letters: \(totalLetters)")
+        print("Total Numbers: \(totalNumbers)")
+    }
 }
 
 extension String {
