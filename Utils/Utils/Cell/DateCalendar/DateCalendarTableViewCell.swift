@@ -9,17 +9,21 @@ import UIKit
 
 @objc protocol DateFormatDelegate: AnyObject {
     @objc func dateFilteredCases(date: [String])
+    @objc func presentPopupViewController(_ viewController: UIViewController)
+
 }
 class DateCalendarTableViewCell: UITableViewCell {
 
-    weak var dateDelegate: DateFormatDelegate?
     @IBOutlet weak var dateFormat: UITextField!
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var setDateTextField: UITextField!
+    @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var calendarTextField: UITextField!
+    @IBOutlet weak var restrictMonth: UITextField!
+    @IBOutlet weak var previousCalendarDate: UITextField!
+    
+    weak var dateDelegate: DateFormatDelegate?
     let centeredDropDown = DropDown()
- 
     lazy var dropDowns: [DropDown] = {
         return [centeredDropDown]
     }()
@@ -34,14 +38,23 @@ class DateCalendarTableViewCell: UITableViewCell {
         dropDowns.forEach { $0.direction = .bottom }
     }
 
+    func setupUI() {
+      
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
-    @IBAction func calendarHandler(_ sender: Any) {
-        
+    @IBAction func calendarHandler(_ sender: UIButton) {
+        let popupViewController = CalendarViewController()
+        popupViewController.calendarDelegate = self
+        popupViewController.buttonTag = sender.tag
+        popupViewController.previousMonth = Int(restrictMonth.text?.trimmed() ?? "") ?? 120
+        popupViewController.modalPresentationStyle = .custom
+        popupViewController.transitioningDelegate = self
+        dateDelegate?.presentPopupViewController(popupViewController)
     }
 }
 
@@ -54,15 +67,17 @@ extension DateCalendarTableViewCell: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let text = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
-            // filteredCases = DateFormate.filterCases(startingWith: text)
-            filteredCases = DateFormate.filterCases(startingWith: text, caseSensitive: true)
-            print("Filtered cases: \(filteredCases)")
-            dateDelegate?.dateFilteredCases(date: filteredCases)
-            DispatchQueue.main.async(group: .none, qos: .background, execute: { [self] in
-                centeredDropDown.show()
-                dropDownHandler()
-            })
+        if textField == dateFormat {
+            if let text = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
+                // filteredCases = DateFormate.filterCases(startingWith: text)
+                filteredCases = DateFormate.filterCases(startingWith: text, caseSensitive: true)
+                print("Filtered cases: \(filteredCases)")
+                dateDelegate?.dateFilteredCases(date: filteredCases)
+                DispatchQueue.main.async(group: .none, qos: .background, execute: { [self] in
+                    centeredDropDown.show()
+                    dropDownHandler()
+                })
+            }
         }
         return true
     }
@@ -77,4 +92,18 @@ extension DateCalendarTableViewCell: UITextFieldDelegate {
             centeredDropDown.hide()
         }
     }
+}
+
+extension DateCalendarTableViewCell: calendarDateSelectDelegate {
+    func selectedDate(text: String, tag: Int) {
+        if tag == 0 {
+            calendarTextField.text = text
+        } else {
+            previousCalendarDate.text = text
+        }
+    }
+}
+
+extension DateCalendarTableViewCell: UIViewControllerTransitioningDelegate {
+    
 }

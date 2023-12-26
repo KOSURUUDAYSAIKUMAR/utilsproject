@@ -14,6 +14,8 @@ protocol CustomeHeaderViewDelegate: AnyObject {
 class CustomHeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var arrowOutlet: UIButton!
+    
+    @IBOutlet weak var headerView: UIView!
     weak var delegate: CustomeHeaderViewDelegate?
     var sectionNumber: Int!
     
@@ -22,9 +24,9 @@ class CustomHeaderView: UITableViewHeaderFooterView {
         addBorderAndColor(color: .white, width: 1, corner_radius: 5, clipsToBounds: true)
        let gesture = UITapGestureRecognizer(target: self, action: #selector(CustomHeaderView.tableViewSectionTapped(_:)))
        self.addGestureRecognizer(gesture)
-       let backgroundView = UIView(frame: self.bounds)
-       backgroundView.backgroundColor = UIColor.systemBlue
-       self.backgroundView = backgroundView
+//       let backgroundView = UIView(frame: self.bounds)
+//       backgroundView.backgroundColor = UIColor.systemBlue
+//       self.backgroundView = backgroundView
    }
 
    @objc func tableViewSectionTapped(_ gesture: UIGestureRecognizer) {

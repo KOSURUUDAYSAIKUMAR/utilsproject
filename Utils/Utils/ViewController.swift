@@ -11,6 +11,7 @@ class ViewController: BaseViewController {
 
     @IBOutlet weak var utilTBView: UITableView!
     
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var zkCarousel: Carousel!
     @IBOutlet weak var networkMsg: UILabel!
     var currentList = [DataItem]()
@@ -25,6 +26,7 @@ class ViewController: BaseViewController {
     var vm: ViewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+     //   headerLabel.backgroundColor = .primaryColor
         vm.network = self
         // Do any additional setup after loading the view.
         setupTableview()
@@ -39,11 +41,14 @@ class ViewController: BaseViewController {
         utilTBView.register(UINib(nibName: "ValidationTableViewCell", bundle: nil), forCellReuseIdentifier: "ValidationTableViewCell")
         utilTBView.register(UINib(nibName: "AlertDialogTableViewCell", bundle: nil), forCellReuseIdentifier: "AlertDialogTableViewCell")
         utilTBView.register(UINib(nibName: "DateCalendarTableViewCell", bundle: nil), forCellReuseIdentifier: "DateCalendarTableViewCell")
+        utilTBView.register(UINib(nibName: "PhotoLocationTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoLocationTableViewCell")
         
         Provider.shared.addDataItem(withTitle: "Mandatory Field Validations", list: [])
         Provider.shared.addDataItem(withTitle: "View All Alert Dialog", list: ["Ok Alert Dialog", "Yes/No Alert Dialog", "Custom Icon Alert Dialog", "Custom Icon Yes/No Alert Dialog", "Custom Layout Alert Dialog", "Custom ListView in Alert Dialog"])
         Provider.shared.addDataItem(withTitle: "View all progress dialogue", list: ["Normal Progress Dialogue","Custom Progress Dialogue"])
         Provider.shared.addDataItem(withTitle: "View Date and Calendar", list: [])
+        Provider.shared.addDataItem(withTitle: "View Photo, Capture and Location", list: [])
+        Provider.shared.addDataItem(withTitle: "View Buttom sheet Dialogue", list: ["Custom Bottom sheet Dialogue"])
         currentList = Provider.shared.ideaListItems()
     }
     
@@ -95,6 +100,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "Header") as! CustomHeaderView
         headerView.headerTitle.text = self.currentList[section].title
+        headerView.headerView.backgroundColor = .primaryColor
         headerView.sectionNumber = section
         headerView.delegate = self
         if currentList[section].isExpand {
@@ -135,7 +141,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let item = self.currentList[section] as DataItem
         switch section {
-        case 0, 3:
+        case 0, 3, 4:
             return 1
         default:
             return item.dataList.count
@@ -153,7 +159,13 @@ extension ViewController: UITableViewDataSource {
              return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DateCalendarTableViewCell", for: indexPath) as? DateCalendarTableViewCell else { return UITableViewCell() }
+            cell.setupUI()
             cell.dateDelegate = self
+            return cell
+        case 4:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoLocationTableViewCell", for: indexPath) as? PhotoLocationTableViewCell else { return UITableViewCell() }
+            cell.parentViewController = self
+            cell.delegate = self
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AlertDialogTableViewCell", for: indexPath) as?  AlertDialogTableViewCell
@@ -174,6 +186,13 @@ extension ViewController: BaseVCProtocol {
 }
 
 extension ViewController: AlertDialogDelegate {
+    func bottomSheet() {
+        let popupViewController = ButtomSheetViewController()
+        popupViewController.preferredSheetSizing = .medium
+        popupViewController.preferredSheetCornerRadius =  25.0
+        present(popupViewController, animated: true, completion: nil)
+    }
+    
     func alertButtonTag(tag: Int) {
         switch tag {
         case 0:
@@ -263,5 +282,16 @@ extension ViewController: ProgressDelegate {
 extension ViewController: DateFormatDelegate {
     func dateFilteredCases(date: [String]) {
         print(date, "date filtered selected")
+    }
+    func presentPopupViewController(_ viewController: UIViewController) {
+        if viewController is CalendarViewController {
+            (viewController as! CalendarViewController).appear(sender: self)
+        }
+    }
+}
+
+extension ViewController: cameraGalleryLocationDelegate {
+    func cameraGalleryLocationHandler(tag: Int) {
+        
     }
 }

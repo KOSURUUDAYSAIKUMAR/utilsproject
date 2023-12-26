@@ -11,6 +11,7 @@ import UIKit
     @objc func alertButtonTag(tag: Int)
     @objc optional func alertButtonTagYN(tag: String)
     @objc func progressBar(tag:Int)
+    @objc func bottomSheet()
 }
 
 class AlertDialogTableViewCell: UITableViewCell {
@@ -34,8 +35,10 @@ class AlertDialogTableViewCell: UITableViewCell {
         switch section {
         case 1:
             delegate?.alertButtonTag(tag: sender.tag)
-        default:
+        case 2:
             delegate?.progressBar(tag: sender.tag)
+        default:
+            delegate?.bottomSheet()
         }
     }
     

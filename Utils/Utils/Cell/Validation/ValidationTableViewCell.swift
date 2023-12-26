@@ -223,7 +223,18 @@ extension ValidationTableViewCell: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         switch textField {
         case mobileTextField:
-            return validate.numberAllowedCharacteristics(text: string)
+            let currentText = textField.text ?? ""
+            let newText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            // Restrict the length to 10 or 11 digits
+            let allowedLength = 11  // Adjust as needed
+            if newText.count > allowedLength {
+                return false
+            }
+            // Allow only digits
+            let allowedCharacters = CharacterSet.decimalDigits
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+           // return validate.numberAllowedCharacteristics(text: string)
         case pinCodeTextField:
             return validate.pinCodeAllowedText(text: string)
         default:
