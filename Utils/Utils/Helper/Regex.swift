@@ -23,6 +23,11 @@ extension UIView {
         self.layer.cornerRadius = corner_radius
         self.clipsToBounds      = clipsToBounds
     }
+    
+    func corner(radius: CGFloat = 25) {
+      self.layer.cornerRadius = radius
+      self.layer.masksToBounds = true
+    }
 }
 
 extension String {

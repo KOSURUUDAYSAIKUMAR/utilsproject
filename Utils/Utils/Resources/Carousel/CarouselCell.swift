@@ -28,7 +28,7 @@ public class CarouselCell: UICollectionViewCell {
         iv.contentMode = .scaleToFill
         iv.backgroundColor = .clear
         iv.clipsToBounds = true
-        iv.addBlackGradientLayer(frame: bounds)
+       // iv.addBlackGradientLayer(frame: bounds)
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()

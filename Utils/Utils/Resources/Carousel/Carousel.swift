@@ -59,7 +59,9 @@ final public class Carousel: UIView,
         cv.delegate = self
         cv.dataSource = self
         cv.isPagingEnabled = true
-        cv.register(CarouselCell.self, forCellWithReuseIdentifier: CarouselCell.identifier)
+        let customCollectionViewCellNib = UINib(nibName: "CarouselCollectionViewCell", bundle: nil)
+        cv.register(customCollectionViewCellNib, forCellWithReuseIdentifier: CarouselCollectionViewCell.identifier)
+        /*cv.register(CarouselCell.self, forCellWithReuseIdentifier: CarouselCell.identifier)*/
         cv.clipsToBounds = true
         cv.backgroundColor = .clear
         cv.showsHorizontalScrollIndicator = false
@@ -144,8 +146,10 @@ final public class Carousel: UIView,
     
     // MARK: - UICollectionViewDelegate & DataSource
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarouselCell.identifier,for: indexPath) as? CarouselCell else {
-            return CarouselCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarouselCollectionViewCell.identifier,for: indexPath) as? CarouselCollectionViewCell else {
+            return CarouselCollectionViewCell()}
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarouselCell.identifier,for: indexPath) as? CarouselCell else {
+//            return CarouselCell()}
         cell.slide = slides[indexPath.item]
         return cell
     }

@@ -72,6 +72,14 @@
 		35D93A722B3573B700580CEC /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D93A612B3573B700580CEC /* FSCalendarConstants.m */; };
 		35D93A762B35742000580CEC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D93A742B35742000580CEC /* CalendarViewController.swift */; };
 		35D93A772B35742000580CEC /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D93A752B35742000580CEC /* CalendarViewController.xib */; };
+		35D97E6C2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D97E6A2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.swift */; };
+		35D97E6D2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D97E6B2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.xib */; };
+		35D97E702B3BF56000F3C3F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35D97E6F2B3BF56000F3C3F4 /* GoogleService-Info.plist */; };
+		35D97E752B3C00DB00F3C3F4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D97E742B3C00DB00F3C3F4 /* CustomTextField.swift */; };
+		35D97E772B3C010400F3C3F4 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D97E762B3C010400F3C3F4 /* CustomTextField.xib */; };
+		35D97E792B3C02B600F3C3F4 /* FireBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D97E782B3C02B600F3C3F4 /* FireBaseViewController.swift */; };
+		35D97E7B2B3C036200F3C3F4 /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D97E7A2B3C036200F3C3F4 /* FirebaseViewModel.swift */; };
+		35D97E7D2B3C03F100F3C3F4 /* UserInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D97E7C2B3C03F100F3C3F4 /* UserInApp.swift */; };
 		35FA12E72B340A1F00FEC83B /* PopUpPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12E62B340A1F00FEC83B /* PopUpPresentationController.swift */; };
 		35FA12EE2B34243100FEC83B /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12ED2B34243100FEC83B /* Button+Extension.swift */; };
 		35FA12F12B3425A200FEC83B /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12EF2B3425A200FEC83B /* GenderViewController.swift */; };
@@ -198,6 +206,14 @@
 		35D93A632B3573B700580CEC /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
 		35D93A742B35742000580CEC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		35D93A752B35742000580CEC /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		35D97E6A2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		35D97E6B2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
+		35D97E6F2B3BF56000F3C3F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		35D97E742B3C00DB00F3C3F4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		35D97E762B3C010400F3C3F4 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		35D97E782B3C02B600F3C3F4 /* FireBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewController.swift; sourceTree = "<group>"; };
+		35D97E7A2B3C036200F3C3F4 /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
+		35D97E7C2B3C03F100F3C3F4 /* UserInApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInApp.swift; sourceTree = "<group>"; };
 		35FA12E62B340A1F00FEC83B /* PopUpPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpPresentationController.swift; sourceTree = "<group>"; };
 		35FA12ED2B34243100FEC83B /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		35FA12EF2B3425A200FEC83B /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +326,8 @@
 		35B0902A2B3193CE00CD765A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				35D97E7E2B3C3E1800F3C3F4 /* View */,
+				35D97E732B3C00BB00F3C3F4 /* ReuseableView */,
 				35B090752B31C0F200CD765A /* Resources */,
 				35B090702B31AD1F00CD765A /* Helper */,
 				35B090662B319F6B00CD765A /* Model */,
@@ -319,6 +337,7 @@
 				35B0902D2B3193CE00CD765A /* SceneDelegate.swift */,
 				35B0902F2B3193CE00CD765A /* ViewController.swift */,
 				35B090732B31B4B400CD765A /* BaseViewController.swift */,
+				35D97E782B3C02B600F3C3F4 /* FireBaseViewController.swift */,
 				35B090312B3193CE00CD765A /* Main.storyboard */,
 				35B090342B3193CF00CD765A /* Assets.xcassets */,
 				35B090362B3193CF00CD765A /* LaunchScreen.storyboard */,
@@ -347,6 +366,7 @@
 		35B0905B2B319AA700CD765A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				35D97E692B3BDF7600F3C3F4 /* ImageSlideShow */,
 				35D93A782B35951900580CEC /* PhotoCaptureLocation */,
 				35FA130F2B3470B000FEC83B /* DateCalendar */,
 				3595E02D2B32BEAE00B00C86 /* Alert Dialogs */,
@@ -368,6 +388,8 @@
 		35B090632B319F3900CD765A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				35D97E7C2B3C03F100F3C3F4 /* UserInApp.swift */,
+				35B090672B319F7A00CD765A /* DataItem.swift */,
 				35B090642B319F5800CD765A /* Provider.swift */,
 			);
 			path = ViewModel;
@@ -376,13 +398,13 @@
 		35B090662B319F6B00CD765A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				35B090672B319F7A00CD765A /* DataItem.swift */,
 				35B0906E2B31AAC100CD765A /* Validate.swift */,
 				35FA12F32B34349C00FEC83B /* AlertHelperModel.swift */,
 				35C710D12B33151C004DBBC2 /* NetworkModel.swift */,
 				356609172B3A974900E7D872 /* LocationManager.swift */,
 				356609192B3A9B5000E7D872 /* CameraPhotos.swift */,
 				3566091B2B3A9B7100E7D872 /* CameraGallery.swift */,
+				35D97E7A2B3C036200F3C3F4 /* FirebaseViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,16 +438,11 @@
 		35B090752B31C0F200CD765A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				351C97162B3AE784001D78E0 /* ButtomSheet */,
-				35D93A732B35740600580CEC /* Calendar */,
+				35D97E6E2B3BF54D00F3C3F4 /* Firebase */,
 				35FA130A2B34708200FEC83B /* DateCalandar */,
 				35FA13012B3466A500FEC83B /* Carousel */,
-				35FA12F82B344BEB00FEC83B /* Progress */,
-				35FA12E82B34212D00FEC83B /* CustomLayout */,
 				35C710CE2B331477004DBBC2 /* Network Connection */,
-				3595E0322B32BEF000B00C86 /* CustomPopOver */,
 				35B090762B31C11000CD765A /* DropDown */,
-				35C710CD2B32F70C004DBBC2 /* ImageAlert */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -542,6 +559,45 @@
 			path = PhotoCaptureLocation;
 			sourceTree = "<group>";
 		};
+		35D97E692B3BDF7600F3C3F4 /* ImageSlideShow */ = {
+			isa = PBXGroup;
+			children = (
+				35D97E6A2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.swift */,
+				35D97E6B2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.xib */,
+			);
+			path = ImageSlideShow;
+			sourceTree = "<group>";
+		};
+		35D97E6E2B3BF54D00F3C3F4 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				35D97E6F2B3BF56000F3C3F4 /* GoogleService-Info.plist */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		35D97E732B3C00BB00F3C3F4 /* ReuseableView */ = {
+			isa = PBXGroup;
+			children = (
+				35D97E742B3C00DB00F3C3F4 /* CustomTextField.swift */,
+				35D97E762B3C010400F3C3F4 /* CustomTextField.xib */,
+			);
+			path = ReuseableView;
+			sourceTree = "<group>";
+		};
+		35D97E7E2B3C3E1800F3C3F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35C710CD2B32F70C004DBBC2 /* ImageAlert */,
+				3595E0322B32BEF000B00C86 /* CustomPopOver */,
+				35FA12F82B344BEB00FEC83B /* Progress */,
+				35FA12E82B34212D00FEC83B /* CustomLayout */,
+				351C97162B3AE784001D78E0 /* ButtomSheet */,
+				35D93A732B35740600580CEC /* Calendar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		35FA12E82B34212D00FEC83B /* CustomLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,6 +681,7 @@
 				35B090242B3193CE00CD765A /* Sources */,
 				35B090252B3193CE00CD765A /* Frameworks */,
 				35B090262B3193CE00CD765A /* Resources */,
+				F84B3E19C36FB37CE99F66DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -728,8 +785,11 @@
 				35B090622B319D3B00CD765A /* Header.xib in Resources */,
 				35FA130E2B3470AB00FEC83B /* DateCalendarTableViewCell.xib in Resources */,
 				35D93A772B35742000580CEC /* CalendarViewController.xib in Resources */,
+				35D97E6D2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.xib in Resources */,
 				35B090382B3193CF00CD765A /* LaunchScreen.storyboard in Resources */,
+				35D97E772B3C010400F3C3F4 /* CustomTextField.xib in Resources */,
 				35B0906D2B31A11800CD765A /* ValidationTableViewCell.xib in Resources */,
+				35D97E702B3BF56000F3C3F4 /* GoogleService-Info.plist in Resources */,
 				35C710C82B32CAC6004DBBC2 /* CustomDropDownCell.xib in Resources */,
 				35B090352B3193CF00CD765A /* Assets.xcassets in Resources */,
 				35B090332B3193CE00CD765A /* Main.storyboard in Resources */,
@@ -778,6 +838,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F84B3E19C36FB37CE99F66DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Utils/Pods-Utils-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -785,8 +862,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D97E6C2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.swift in Sources */,
 				35B0906F2B31AAC100CD765A /* Validate.swift in Sources */,
 				35B090862B31C11000CD765A /* DPDUIView+Extension.swift in Sources */,
+				35D97E7B2B3C036200F3C3F4 /* FirebaseViewModel.swift in Sources */,
 				35FA13002B345B9200FEC83B /* AJProgressView.swift in Sources */,
 				3566091C2B3A9B7100E7D872 /* CameraGallery.swift in Sources */,
 				35D93A6F2B3573B700580CEC /* FSCalendarExtensions.m in Sources */,
@@ -818,6 +897,8 @@
 				35FA12E72B340A1F00FEC83B /* PopUpPresentationController.swift in Sources */,
 				3595E0302B32BED000B00C86 /* AlertDialogTableViewCell.swift in Sources */,
 				35B090722B31AD3000CD765A /* Regex.swift in Sources */,
+				35D97E792B3C02B600F3C3F4 /* FireBaseViewController.swift in Sources */,
+				35D97E7D2B3C03F100F3C3F4 /* UserInApp.swift in Sources */,
 				35B090892B31C11000CD765A /* DropDownCell.swift in Sources */,
 				35B090652B319F5800CD765A /* Provider.swift in Sources */,
 				35FA13052B34672400FEC83B /* CarouselCell.swift in Sources */,
@@ -839,6 +920,7 @@
 				35D93A692B3573B700580CEC /* FSCalendarCollectionView.m in Sources */,
 				351C97192B3AE79A001D78E0 /* ButtomSheetViewController.swift in Sources */,
 				35D93A722B3573B700580CEC /* FSCalendarConstants.m in Sources */,
+				35D97E752B3C00DB00F3C3F4 /* CustomTextField.swift in Sources */,
 				356609182B3A974900E7D872 /* LocationManager.swift in Sources */,
 				35D93A662B3573B700580CEC /* FSCalendar.m in Sources */,
 				35FA12EE2B34243100FEC83B /* Button+Extension.swift in Sources */,
@@ -1033,9 +1115,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = XNBXMXSDDD;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Utils/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Utils will use your camera";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Manager would like to access your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Manager would like to access your location";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Utils will use your gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1047,7 +1134,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fai.Utils;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fai.Utils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Utils/Resources/DateCalandar/FSCalendar/Utils-Bridging-Header.h";
@@ -1067,8 +1154,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XNBXMXSDDD;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Utils/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Utils will use your camera";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Manager would like to access your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Manager would like to access your location";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Utils will use your gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1080,7 +1172,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fai.Utils;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fai.Utils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Utils/Resources/DateCalandar/FSCalendar/Utils-Bridging-Header.h";

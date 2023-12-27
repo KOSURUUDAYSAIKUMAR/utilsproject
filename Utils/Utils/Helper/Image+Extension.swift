@@ -11,9 +11,9 @@ class Image_Extension: NSObject {
 
 }
 extension UIImageView {
-    func addBlackGradientLayer(frame: CGRect){
+    func addBlackGradientLayer(){
         let gradient = CAGradientLayer()
-        gradient.frame = frame
+        gradient.frame = bounds
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.6).cgColor]
         gradient.locations = [0.0, 0.5]
         layer.insertSublayer(gradient, at: 0)
