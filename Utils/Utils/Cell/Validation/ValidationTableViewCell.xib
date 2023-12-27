@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,14 +24,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="55A-HX-aOy">
                                 <rect key="frame" x="0.0" y="0.0" width="334" height="529"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FIF-Eb-kHJ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4M-PA-GVf" customClass="CustomTextField" customModule="Utils" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="5" width="334" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="hcq-0w-wCE"/>
+                                            <constraint firstAttribute="height" constant="45" id="bCG-af-fmh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    </view>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kqt-Hd-r3e">
                                         <rect key="frame" x="0.0" y="58" width="334" height="45"/>
                                         <constraints>
@@ -164,11 +164,11 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="8y1-Wx-vXc" secondAttribute="bottom" id="6Dr-RC-9Mg"/>
                                     <constraint firstItem="8y1-Wx-vXc" firstAttribute="leading" secondItem="55A-HX-aOy" secondAttribute="leading" id="99l-s0-NVo"/>
-                                    <constraint firstItem="FIF-Eb-kHJ" firstAttribute="top" secondItem="55A-HX-aOy" secondAttribute="top" constant="5" id="GLq-Mc-gzk"/>
                                     <constraint firstAttribute="trailing" secondItem="8y1-Wx-vXc" secondAttribute="trailing" id="Kfm-TP-uEt"/>
-                                    <constraint firstItem="FIF-Eb-kHJ" firstAttribute="leading" secondItem="55A-HX-aOy" secondAttribute="leading" id="ZFp-gC-Yvo"/>
+                                    <constraint firstAttribute="trailing" secondItem="V4M-PA-GVf" secondAttribute="trailing" id="LMS-T2-JVA"/>
+                                    <constraint firstItem="V4M-PA-GVf" firstAttribute="top" secondItem="55A-HX-aOy" secondAttribute="top" constant="5" id="a6u-sP-cmC"/>
                                     <constraint firstItem="8y1-Wx-vXc" firstAttribute="top" secondItem="tg0-rP-YMw" secondAttribute="bottom" constant="10" id="fpU-OG-VXY"/>
-                                    <constraint firstAttribute="trailing" secondItem="FIF-Eb-kHJ" secondAttribute="trailing" id="u5r-X2-DV8"/>
+                                    <constraint firstItem="V4M-PA-GVf" firstAttribute="leading" secondItem="55A-HX-aOy" secondAttribute="leading" id="ilv-gR-0xA"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -198,7 +198,7 @@
                 <outlet property="dropDownTextField" destination="MTy-wS-huf" id="joG-vE-avk"/>
                 <outlet property="mailTextField" destination="SpY-Iv-B19" id="8YI-e3-byc"/>
                 <outlet property="mobileTextField" destination="MzK-K9-3rd" id="ckw-sE-bMJ"/>
-                <outlet property="nameTextField" destination="FIF-Eb-kHJ" id="DzQ-Ks-1Pj"/>
+                <outlet property="nameTextField" destination="V4M-PA-GVf" id="CuW-rB-anP"/>
                 <outlet property="otpTextField" destination="GKu-Ro-8uL" id="mi0-yO-LJh"/>
                 <outlet property="passwordTextField" destination="WDh-Oi-yhn" id="OUY-0d-PZ5"/>
                 <outlet property="pinCodeTextField" destination="aUo-Gr-0Hd" id="JsR-zK-3n1"/>
@@ -210,10 +210,10 @@
     <resources>
         <image name="Disclosure_Arrow_1" width="9" height="6"/>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

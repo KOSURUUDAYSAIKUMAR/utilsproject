@@ -9,7 +9,7 @@ import UIKit
 
 class ValidationTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameTextField: CustomTextField!
     
     @IBOutlet weak var ageTextField: UITextField!
     
@@ -58,7 +58,9 @@ class ValidationTableViewCell: UITableViewCell {
     }
 
     func setUI(with index: Int) {
-        nameTextField.delegate = self
+        nameTextField.textField.delegate = self
+        nameTextField.textField.backgroundColor = .white
+        nameTextField.placeholderText = "Name"
         ageTextField.delegate = self
         mailTextField.delegate = self
         mobileTextField.delegate = self
@@ -107,7 +109,7 @@ class ValidationTableViewCell: UITableViewCell {
     
     func areAllTextFieldsEmpty() -> Bool {
         // Check if all text fields are empty
-        return nameTextField.text?.isEmpty ?? true &&
+        return nameTextField.textField.text?.isEmpty ?? true &&
         ageTextField.text?.isEmpty ?? true &&
         mailTextField.text?.isEmpty ?? true &&
         mobileTextField.text?.isEmpty ?? true &&
@@ -138,18 +140,18 @@ class ValidationTableViewCell: UITableViewCell {
 extension ValidationTableViewCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField {
-        case nameTextField:
-            if validate.isValidFullName(nameTextField.text ?? "") {
-                nameTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
-            } else if let age = nameTextField.text, age.count <= 0 {
+        case nameTextField.textField:
+            if validate.isValidFullName(nameTextField.textField.text ?? "") {
+                nameTextField.textField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+            } else if let age = nameTextField.textField.text, age.count <= 0 {
                 print("Empty details")
-                nameTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+                nameTextField.textField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else {
-                nameTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
+                nameTextField.textField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
                 delegate?.showAlert?(msg: "Invalid name")
             }
         case ageTextField:
-            if let age = ageTextField.text?.trimmed(), validate.ageCount(text: age) {
+            if let age = ageTextField.text?.trimmed(), validate.ageCount(text: age), validate.numberValidation(text: age) {
                 ageTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else if let age = ageTextField.text, age.count <= 0 {
                 print("Empty details")

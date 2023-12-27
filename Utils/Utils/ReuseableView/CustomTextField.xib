@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="371" height="45"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWd-RU-8tc">
-                            <rect key="frame" x="8" y="5" width="355" height="34"/>
+                            <rect key="frame" x="0.0" y="5" width="371" height="34"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -38,8 +38,8 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Uxb-aO-Lwl" firstAttribute="leading" secondItem="Jdv-DE-eQF" secondAttribute="leading" id="GyQ-0h-uv5"/>
-                        <constraint firstAttribute="trailing" secondItem="IWd-RU-8tc" secondAttribute="trailing" constant="8" id="I2B-qt-B9U"/>
-                        <constraint firstItem="IWd-RU-8tc" firstAttribute="leading" secondItem="Jdv-DE-eQF" secondAttribute="leading" constant="8" id="V6o-BZ-WbY"/>
+                        <constraint firstAttribute="trailing" secondItem="IWd-RU-8tc" secondAttribute="trailing" id="I2B-qt-B9U"/>
+                        <constraint firstItem="IWd-RU-8tc" firstAttribute="leading" secondItem="Jdv-DE-eQF" secondAttribute="leading" id="V6o-BZ-WbY"/>
                         <constraint firstItem="Uxb-aO-Lwl" firstAttribute="top" secondItem="IWd-RU-8tc" secondAttribute="bottom" constant="5" id="WdS-Jf-UK3"/>
                         <constraint firstItem="IWd-RU-8tc" firstAttribute="top" secondItem="Jdv-DE-eQF" secondAttribute="top" constant="5" id="dMg-EN-wAH"/>
                         <constraint firstAttribute="trailing" secondItem="Uxb-aO-Lwl" secondAttribute="trailing" id="fZw-QP-VGn"/>

@@ -15,7 +15,7 @@ protocol LoginService {
 protocol LoginFunctionProtocol {
     func login(username: String?, password: String?, type: LoginType)
     func create(username: String?, password: String?, type: LoginType)
-    func sendPasswordResetEmail(email: String)
+    func sendPasswordReset(email: String)
 }
 
 protocol LoginResultProtocol: AnyObject {
@@ -88,7 +88,7 @@ class FirebaseViewModel: LoginFunctionProtocol {
         }
     }
     
-    func sendPasswordResetEmail(email: String) {
+    func sendPasswordReset(email: String) {
         Auth.auth().sendPasswordReset(withEmail: email) { [self] (error) in
           if let error = error {
               let err = error as NSError
@@ -104,12 +104,14 @@ class FirebaseViewModel: LoginFunctionProtocol {
               case AuthErrorCode.invalidMessagePayload.rawValue:
                   print("Indicates an invalid email template for sending update email.")
             default:
-              print("Error message: \(error.localizedDescription)")
+              print("Error message ---: \(error.localizedDescription)")
             }
+              delegate?.successAuth(error: NSError(domain: error.localizedDescription, code: 1, userInfo:nil))
+              // delegate?.error(error: NSError(domain: error.localizedDescription, code: 1, userInfo:nil), type: .normal)
           } else {
             print("Reset password email has been successfully sent")
+              delegate?.successAuth(error: NSError(domain: "Reset password email has been successfully sent", code: 1, userInfo:nil))
           }
-            delegate?.error(error: NSError(domain: error?.localizedDescription ?? "Reset password email has been successfully sent", code: 1, userInfo:nil), type: .normal)
         }
     }
     
@@ -129,10 +131,11 @@ class FirebaseViewModel: LoginFunctionProtocol {
             default:
               print("Error message: \(error.localizedDescription)")
             }
+              delegate?.successAuth(error: NSError(domain: error.localizedDescription, code: 1, userInfo:nil))
           } else {
                print("User signs up successfully")
+              delegate?.successAuth(error: NSError(domain: "User signs up successfully", code: 1, userInfo:nil))
           }
-            delegate?.error(error: NSError(domain: error?.localizedDescription ?? "User signs up successfully", code: 1, userInfo:nil), type: .normal)
         })
     }
     
@@ -156,10 +159,11 @@ class FirebaseViewModel: LoginFunctionProtocol {
                 default:
                     print("Error message: \(error.localizedDescription)")
                 }
+                delegate?.successAuth(error: NSError(domain: error.localizedDescription, code: 1, userInfo:nil))
             } else {
                 print("Update email is successful")
+                delegate?.successAuth(error: NSError(domain: "Update email is successful", code: 1, userInfo:nil))
             }
-            delegate?.error(error: NSError(domain: error?.localizedDescription ?? "Update email is successful", code: 1, userInfo:nil), type: .normal)
         })
     }
     
@@ -175,14 +179,32 @@ class FirebaseViewModel: LoginFunctionProtocol {
         createUser(email: email, password: password)
     }
     
+    func stateChangeListiner() {
+        Auth.auth().addStateDidChangeListener { auth, user in
+            print("auth ", auth.currentUser?.email)
+            print("user ", user?.email)
+            if user == nil {
+                print("User signed out, zero-element state")
+            } else {
+                print("User signed out")
+            }
+        }
+    }
     // MARK: - Sign out
     func signOutHandler() {
         let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
-            self.delegate?.logoutOccur()
-        } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+            do {
+                try firebaseAuth.signOut()
+                if firebaseAuth.currentUser == nil {
+                    delegate?.successAuth(error: NSError(domain: "Login or create", code: 1))
+                } else {
+                    delegate?.logoutOccur()
+                }
+            } catch let signOutError as NSError {
+                print("Error signing out: %@", signOutError)
+                delegate?.successAuth(error: NSError(domain: signOutError.localizedDescription, code: 1, userInfo:nil))
+            }
         }
     }
 }

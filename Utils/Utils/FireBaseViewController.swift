@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class FireBaseViewController: BaseViewController {
 
@@ -29,11 +30,11 @@ class FireBaseViewController: BaseViewController {
         viewModel.delegate = self
         configureNavigationBar()
     }
-//    
-//    override func viewWillAppear(_ animated: Bool) {
-//      super.viewWillAppear(animated)
-//      navigationController?.setTitleColor(.label)
-//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.stateChangeListiner()
+    }
 //
 //    override func viewWillDisappear(_ animated: Bool) {
 //      super.viewWillDisappear(animated)
@@ -64,7 +65,7 @@ class FireBaseViewController: BaseViewController {
     }
     
     @IBAction func forgotPasswordHandler(_ sender: Any) {
-        viewModel.sendPasswordResetEmail(email: userNameTextField.text ?? "")
+        viewModel.sendPasswordReset(email: userNameTextField.text ?? "")
     }
     
     func updatePassword() {
@@ -82,7 +83,7 @@ class FireBaseViewController: BaseViewController {
 
 extension FireBaseViewController: LoginResultProtocol {
     func successAuth(error: Error?) {
-        AlertHelperModel.showAlert(title: "Error", message: "\(error?.localizedDescription)\n\n Ocurred in \(self)", viewController: self)
+        AlertHelperModel.showAlert(title: "Error", message: error?.localizedDescription ?? "Something went wrong", viewController: self)
     }
     
     func logoutOccur() {
