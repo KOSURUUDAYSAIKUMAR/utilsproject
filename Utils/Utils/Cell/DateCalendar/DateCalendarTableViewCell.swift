@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SearchTextField
 
 @objc protocol DateFormatDelegate: AnyObject {
     @objc func dateFilteredCases(date: [String])
@@ -14,7 +15,7 @@ import UIKit
 }
 class DateCalendarTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var dateFormat: UITextField!
+    @IBOutlet weak var dateFormat: SearchTextField!
     @IBOutlet weak var setDateTextField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -23,10 +24,10 @@ class DateCalendarTableViewCell: UITableViewCell {
     @IBOutlet weak var previousCalendarDate: UITextField!
     
     weak var dateDelegate: DateFormatDelegate?
-    let centeredDropDown = DropDown()
-    lazy var dropDowns: [DropDown] = {
-        return [centeredDropDown]
-    }()
+//    let centeredDropDown = DropDown()
+//    lazy var dropDowns: [DropDown] = {
+//        return [centeredDropDown]
+//    }()
     var filteredCases = [String]()
     
     override func awakeFromNib() {
@@ -34,12 +35,14 @@ class DateCalendarTableViewCell: UITableViewCell {
         // Initialization code
         dateLabel.text = "Eg: dd-MM-YY, dd-MM-YYYY, MM-dd-YYYY, yyyy-MM-dd, YYYY-MM-dd HH:mm, YYYY-MM-dd HH:mm:ss"
         dateFormat.delegate = self
-        dropDowns.forEach { $0.dismissMode = .onTap }
-        dropDowns.forEach { $0.direction = .bottom }
+//        dropDowns.forEach { $0.dismissMode = .onTap }
+//        dropDowns.forEach { $0.direction = .bottom }
     }
 
     func setupUI() {
-      
+        dateFormat.theme.font = UIFont.systemFont(ofSize: 15)
+        dateFormat.theme.separatorColor = .clear
+        dateFormat.theme.cellHeight = 44
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -74,24 +77,33 @@ extension DateCalendarTableViewCell: UITextFieldDelegate {
                 print("Filtered cases: \(filteredCases)")
                 dateDelegate?.dateFilteredCases(date: filteredCases)
                 DispatchQueue.main.async(group: .none, qos: .background, execute: { [self] in
-                    centeredDropDown.show()
-                    dropDownHandler()
+                    dateFormat.filterStrings(filteredCases)
+                    dateFormat.theme.bgColor = UIColor(white: 0.9, alpha: 1)
+                    dateFormat.theme.borderColor = .white
+                    dateFormat.comparisonOptions = .caseInsensitive
+                    dateFormat.itemSelectionHandler = { [self] item, position in
+                        let text = item[position].title
+                        dateFormat.text = text
+                        setDateTextField.text = Date().convertToString(formate: text)
+                    }
+//                    centeredDropDown.show()
+//                    dropDownHandler()
                 })
             }
         }
         return true
     }
     
-    func dropDownHandler() {
-        centeredDropDown.anchorView = dateFormat
-        centeredDropDown.dataSource = filteredCases
-        centeredDropDown.selectionAction = { [self] (index, item) in
-            print("Item ", item)
-            dateFormat.text = item
-            setDateTextField.text = Date().convertToString(formate: item)
-            centeredDropDown.hide()
-        }
-    }
+//    func dropDownHandler() {
+//        centeredDropDown.anchorView = dateFormat
+//        centeredDropDown.dataSource = filteredCases
+//        centeredDropDown.selectionAction = { [self] (index, item) in
+//            print("Item ", item)
+//            dateFormat.text = item
+//            setDateTextField.text = Date().convertToString(formate: item)
+//            centeredDropDown.hide()
+//        }
+//    }
 }
 
 extension DateCalendarTableViewCell: calendarDateSelectDelegate {

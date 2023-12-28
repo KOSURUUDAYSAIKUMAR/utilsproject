@@ -7,6 +7,7 @@ pod 'FirebaseAnalytics'
 pod 'FirebaseAuth'
 ### For Email Link/Passwordless Auth
 pod 'FirebaseDynamicLinks'
+pod 'SearchTextField'
 end
 
 post_install do |installer|

@@ -27,31 +27,32 @@ class FireBaseViewController: BaseViewController {
         signUpButton.corner()
         forgotPwd.corner(radius: 5.0)
         stackView.corner(radius: 5.0)
-        viewModel.delegate = self
+        configureDelegatesAndHandlers()
         configureNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.stateChangeListiner()
+        navigationController?.setTitleColor(.systemBlue)
     }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//      super.viewWillDisappear(animated)
+
+    override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
 //      view.endEditing(true)
-//      navigationController?.setTitleColor(.systemOrange)
-//    }
-//
-//    override func viewDidDisappear(_ animated: Bool) {
-//      super.viewDidDisappear(animated)
-//      navigationController?.popViewController(animated: false)
-//    }
-//
-//    // Dismisses keyboard when view is tapped
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//      super.touchesBegan(touches, with: event)
-//      view.endEditing(true)
-//    }
+      navigationController?.setTitleColor(.systemOrange)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+      super.viewDidDisappear(animated)
+     navigationController?.popViewController(animated: false)
+    }
+
+    // Dismisses keyboard when view is tapped
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+      super.touchesBegan(touches, with: event)
+      view.endEditing(true)
+    }
     
     @IBAction func didTapSignInButton(_ sender: Any) {
       viewModel.login(username: userNameTextField.text, password: passwordTextField.text, type: .normal)
@@ -74,11 +75,14 @@ class FireBaseViewController: BaseViewController {
     
     // MARK: - UI Configuration
     private func configureNavigationBar() {
-        navigationItem.title = "Welcome"
+        navigationItem.title = "Authentication"
         navigationItem.backBarButtonItem?.tintColor = .primaryColor
-        navigationController?.navigationBar.prefersLargeTitles = true
+    //    navigationController?.navigationBar.prefersLargeTitles = true
     }
-
+    
+    func configureDelegatesAndHandlers() {
+        viewModel.delegate = self
+    }
 }
 
 extension FireBaseViewController: LoginResultProtocol {

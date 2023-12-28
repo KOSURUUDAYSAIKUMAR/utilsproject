@@ -196,8 +196,8 @@ class FirebaseViewModel: LoginFunctionProtocol {
         do {
             do {
                 try firebaseAuth.signOut()
-                if firebaseAuth.currentUser == nil {
-                    delegate?.successAuth(error: NSError(domain: "Login or create", code: 1))
+                if isUserLoggedIn() {
+                    delegate?.successAuth(error: NSError(domain: "Already logged out, need to Login or create", code: 1))
                 } else {
                     delegate?.logoutOccur()
                 }
@@ -206,5 +206,9 @@ class FirebaseViewModel: LoginFunctionProtocol {
                 delegate?.successAuth(error: NSError(domain: signOutError.localizedDescription, code: 1, userInfo:nil))
             }
         }
+    }
+    
+    func isUserLoggedIn() -> Bool {
+      return Auth.auth().currentUser != nil
     }
 }

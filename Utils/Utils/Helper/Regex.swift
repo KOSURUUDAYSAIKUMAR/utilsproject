@@ -35,3 +35,25 @@ extension String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
+
+extension UINavigationController {
+  func configureTabBar(title: String, systemImageName: String) {
+    let tabBarItemImage = UIImage(systemName: systemImageName)
+    tabBarItem = UITabBarItem(title: title,
+                              image: tabBarItemImage?.withRenderingMode(.alwaysTemplate),
+                              selectedImage: tabBarItemImage)
+  }
+
+  enum titleType: CaseIterable {
+    case regular, large
+  }
+
+  func setTitleColor(_ color: UIColor, _ types: [titleType] = titleType.allCases) {
+    if types.contains(.regular) {
+      navigationBar.titleTextAttributes = [.foregroundColor: color]
+    }
+    if types.contains(.large) {
+      navigationBar.largeTitleTextAttributes = [.foregroundColor: color]
+    }
+  }
+}

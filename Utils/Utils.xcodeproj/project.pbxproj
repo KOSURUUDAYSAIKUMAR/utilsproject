@@ -80,6 +80,13 @@
 		35D97E792B3C02B600F3C3F4 /* FireBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D97E782B3C02B600F3C3F4 /* FireBaseViewController.swift */; };
 		35D97E7B2B3C036200F3C3F4 /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D97E7A2B3C036200F3C3F4 /* FirebaseViewModel.swift */; };
 		35D97E7D2B3C03F100F3C3F4 /* UserInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D97E7C2B3C03F100F3C3F4 /* UserInApp.swift */; };
+		35E909CB2B3D4515002F9C02 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E909CA2B3D4515002F9C02 /* AppStoryboard.swift */; };
+		35E909CD2B3D558D002F9C02 /* UIFont+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E909CC2B3D558D002F9C02 /* UIFont+CustomFont.swift */; };
+		35E909D02B3D5B5C002F9C02 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E909CF2B3D5B5C002F9C02 /* Roboto-Regular.ttf */; };
+		35E909D22B3D5B66002F9C02 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E909D12B3D5B66002F9C02 /* Roboto-Light.ttf */; };
+		35E909D42B3D5B6D002F9C02 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E909D32B3D5B6D002F9C02 /* Roboto-Bold.ttf */; };
+		35E909D62B3D5B77002F9C02 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E909D52B3D5B77002F9C02 /* Roboto-Medium.ttf */; };
+		35E909D82B3D5B87002F9C02 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E909D72B3D5B87002F9C02 /* Roboto-MediumItalic.ttf */; };
 		35FA12E72B340A1F00FEC83B /* PopUpPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12E62B340A1F00FEC83B /* PopUpPresentationController.swift */; };
 		35FA12EE2B34243100FEC83B /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12ED2B34243100FEC83B /* Button+Extension.swift */; };
 		35FA12F12B3425A200FEC83B /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA12EF2B3425A200FEC83B /* GenderViewController.swift */; };
@@ -214,6 +221,13 @@
 		35D97E782B3C02B600F3C3F4 /* FireBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewController.swift; sourceTree = "<group>"; };
 		35D97E7A2B3C036200F3C3F4 /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		35D97E7C2B3C03F100F3C3F4 /* UserInApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInApp.swift; sourceTree = "<group>"; };
+		35E909CA2B3D4515002F9C02 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		35E909CC2B3D558D002F9C02 /* UIFont+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFont.swift"; sourceTree = "<group>"; };
+		35E909CF2B3D5B5C002F9C02 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		35E909D12B3D5B66002F9C02 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		35E909D32B3D5B6D002F9C02 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		35E909D52B3D5B77002F9C02 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		35E909D72B3D5B87002F9C02 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		35FA12E62B340A1F00FEC83B /* PopUpPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpPresentationController.swift; sourceTree = "<group>"; };
 		35FA12ED2B34243100FEC83B /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		35FA12EF2B3425A200FEC83B /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
@@ -431,6 +445,8 @@
 				35FA13122B3476E100FEC83B /* Date+Extension.swift */,
 				35B8AA122B355E8C0012ABB3 /* ColorConfigure.swift */,
 				351C97242B3B01DA001D78E0 /* ThemeColor.swift */,
+				35E909CA2B3D4515002F9C02 /* AppStoryboard.swift */,
+				35E909CC2B3D558D002F9C02 /* UIFont+CustomFont.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -438,6 +454,7 @@
 		35B090752B31C0F200CD765A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35E909CE2B3D5B4E002F9C02 /* UIFont */,
 				35D97E6E2B3BF54D00F3C3F4 /* Firebase */,
 				35FA130A2B34708200FEC83B /* DateCalandar */,
 				35FA13012B3466A500FEC83B /* Carousel */,
@@ -596,6 +613,18 @@
 				35D93A732B35740600580CEC /* Calendar */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		35E909CE2B3D5B4E002F9C02 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				35E909D52B3D5B77002F9C02 /* Roboto-Medium.ttf */,
+				35E909D32B3D5B6D002F9C02 /* Roboto-Bold.ttf */,
+				35E909CF2B3D5B5C002F9C02 /* Roboto-Regular.ttf */,
+				35E909D12B3D5B66002F9C02 /* Roboto-Light.ttf */,
+				35E909D72B3D5B87002F9C02 /* Roboto-MediumItalic.ttf */,
+			);
+			path = UIFont;
 			sourceTree = "<group>";
 		};
 		35FA12E82B34212D00FEC83B /* CustomLayout */ = {
@@ -779,14 +808,19 @@
 			files = (
 				35C710CC2B32F3F6004DBBC2 /* CustomAlertViewController.xib in Resources */,
 				351C971A2B3AE79A001D78E0 /* ButtomSheetViewController.xib in Resources */,
+				35E909D02B3D5B5C002F9C02 /* Roboto-Regular.ttf in Resources */,
 				35FA12F22B3425A200FEC83B /* GenderViewController.xib in Resources */,
+				35E909D82B3D5B87002F9C02 /* Roboto-MediumItalic.ttf in Resources */,
+				35E909D42B3D5B6D002F9C02 /* Roboto-Bold.ttf in Resources */,
 				35B090832B31C11000CD765A /* DropDownCell.xib in Resources */,
 				3595E0312B32BED000B00C86 /* AlertDialogTableViewCell.xib in Resources */,
 				35B090622B319D3B00CD765A /* Header.xib in Resources */,
 				35FA130E2B3470AB00FEC83B /* DateCalendarTableViewCell.xib in Resources */,
 				35D93A772B35742000580CEC /* CalendarViewController.xib in Resources */,
 				35D97E6D2B3BDFA000F3C3F4 /* CarouselCollectionViewCell.xib in Resources */,
+				35E909D62B3D5B77002F9C02 /* Roboto-Medium.ttf in Resources */,
 				35B090382B3193CF00CD765A /* LaunchScreen.storyboard in Resources */,
+				35E909D22B3D5B66002F9C02 /* Roboto-Light.ttf in Resources */,
 				35D97E772B3C010400F3C3F4 /* CustomTextField.xib in Resources */,
 				35B0906D2B31A11800CD765A /* ValidationTableViewCell.xib in Resources */,
 				35D97E702B3BF56000F3C3F4 /* GoogleService-Info.plist in Resources */,
@@ -893,10 +927,12 @@
 				35FA130D2B3470AB00FEC83B /* DateCalendarTableViewCell.swift in Sources */,
 				35B090852B31C11000CD765A /* DPDConstants.swift in Sources */,
 				35FA13132B3476E100FEC83B /* Date+Extension.swift in Sources */,
+				35E909CB2B3D4515002F9C02 /* AppStoryboard.swift in Sources */,
 				35B090742B31B4B400CD765A /* BaseViewController.swift in Sources */,
 				35FA12E72B340A1F00FEC83B /* PopUpPresentationController.swift in Sources */,
 				3595E0302B32BED000B00C86 /* AlertDialogTableViewCell.swift in Sources */,
 				35B090722B31AD3000CD765A /* Regex.swift in Sources */,
+				35E909CD2B3D558D002F9C02 /* UIFont+CustomFont.swift in Sources */,
 				35D97E792B3C02B600F3C3F4 /* FireBaseViewController.swift in Sources */,
 				35D97E7D2B3C03F100F3C3F4 /* UserInApp.swift in Sources */,
 				35B090892B31C11000CD765A /* DropDownCell.swift in Sources */,

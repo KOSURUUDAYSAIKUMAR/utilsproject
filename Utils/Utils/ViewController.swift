@@ -32,8 +32,17 @@ class ViewController: BaseViewController {
         setupTableview()
         setupCarouselSlideShow()
         vm.isCheckNetworkHandler()
+        configureNavigationBar()
+        networkMsg.font = .customFont(Roboto.italic, forTextStyle: .body, overrideFontSize: .medium)
     }
 
+    func configureNavigationBar() {
+       navigationItem.title = "Welcome"
+       navigationController?.setTitleColor(.systemBlue)
+       navigationItem.backBarButtonItem?.tintColor = .primaryColor
+     //  navigationController?.navigationBar.prefersLargeTitles = true
+   }
+    
     func setupTableview() {
         utilTBView.delegate = self
         utilTBView.dataSource = self
@@ -49,6 +58,7 @@ class ViewController: BaseViewController {
         Provider.shared.addDataItem(withTitle: "View Date and Calendar", list: [])
         Provider.shared.addDataItem(withTitle: "View Photo, Capture and Location", list: [])
         Provider.shared.addDataItem(withTitle: "View Buttom sheet Dialogue", list: ["Custom Bottom sheet Dialogue"])
+        Provider.shared.addDataItem(withTitle: "Fire base Authentication", list: ["Authentication"])
         currentList = Provider.shared.ideaListItems()
     }
     
@@ -138,6 +148,14 @@ extension ViewController: UITableViewDataSource {
         return self.currentList.count
     }
     
+    // MARK: -
+    // 0 - Validation
+    // 1 - Alert dialogue
+    // 2 - Progress Dialogue
+    // 3 - Date and Calendar
+    // 4 - photo, camera and location
+    // 5 - Buttom sheet
+    // 6 - Authentication.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let item = self.currentList[section] as DataItem
         switch section {
@@ -248,6 +266,14 @@ extension ViewController: AlertDialogDelegate {
         popupViewController.modalPresentationStyle = .custom
         popupViewController.transitioningDelegate = self
         present(popupViewController, animated: true, completion: nil)
+    }
+    
+    func authentication() {
+        let popupViewController = FireBaseViewController.instantiate(fromAppStoryboard: .Main)
+        popupViewController.modalPresentationStyle = .fullScreen
+        popupViewController.transitioningDelegate = self
+        navigationController?.pushViewController(popupViewController, animated: true)
+//        present(popupViewController, animated: true, completion: nil)
     }
 }
 
