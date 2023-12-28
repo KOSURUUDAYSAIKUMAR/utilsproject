@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureApplicationAppearance()
         ThemeService.shared.setThemeStyle(.themeE)
         FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
         return true
     }
 

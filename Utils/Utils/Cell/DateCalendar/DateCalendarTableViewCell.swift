@@ -72,7 +72,6 @@ extension DateCalendarTableViewCell: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == dateFormat {
             if let text = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
-                // filteredCases = DateFormate.filterCases(startingWith: text)
                 filteredCases = DateFormate.filterCases(startingWith: text, caseSensitive: true)
                 print("Filtered cases: \(filteredCases)")
                 dateDelegate?.dateFilteredCases(date: filteredCases)

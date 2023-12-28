@@ -46,13 +46,14 @@
 		35B090882B31C11000CD765A /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090802B31C11000CD765A /* DropDown.swift */; };
 		35B090892B31C11000CD765A /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090812B31C11000CD765A /* DropDownCell.swift */; };
 		35B0908A2B31C11000CD765A /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B090822B31C11000CD765A /* DropDown+Appearance.swift */; };
-		35B8AA132B355E8C0012ABB3 /* ColorConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8AA122B355E8C0012ABB3 /* ColorConfigure.swift */; };
 		35C710C72B32CAC6004DBBC2 /* CustomDropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710C52B32CAC6004DBBC2 /* CustomDropDownCell.swift */; };
 		35C710C82B32CAC6004DBBC2 /* CustomDropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C710C62B32CAC6004DBBC2 /* CustomDropDownCell.xib */; };
 		35C710CB2B32F3F6004DBBC2 /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710C92B32F3F6004DBBC2 /* CustomAlertViewController.swift */; };
 		35C710CC2B32F3F6004DBBC2 /* CustomAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C710CA2B32F3F6004DBBC2 /* CustomAlertViewController.xib */; };
 		35C710D02B331492004DBBC2 /* ReachabilitySwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710CF2B331492004DBBC2 /* ReachabilitySwift.swift */; };
 		35C710D22B33151C004DBBC2 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C710D12B33151C004DBBC2 /* NetworkModel.swift */; };
+		35D491CC2B3D9F5300A21215 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D491CB2B3D9F5300A21215 /* PasswordTextField.swift */; };
+		35D491CE2B3D9F6400A21215 /* PasswordTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D491CD2B3D9F6400A21215 /* PasswordTextField.xib */; };
 		35D681EC2B32C84C00E0CD3F /* DropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D681EA2B32C84C00E0CD3F /* DropDownViewController.swift */; };
 		35D681ED2B32C84C00E0CD3F /* DropDownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D681EB2B32C84C00E0CD3F /* DropDownViewController.xib */; };
 		35D93A642B3573B700580CEC /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D93A472B3573B600580CEC /* FSCalendarCalculator.m */; };
@@ -169,13 +170,14 @@
 		35B090802B31C11000CD765A /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		35B090812B31C11000CD765A /* DropDownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		35B090822B31C11000CD765A /* DropDown+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
-		35B8AA122B355E8C0012ABB3 /* ColorConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConfigure.swift; sourceTree = "<group>"; };
 		35C710C52B32CAC6004DBBC2 /* CustomDropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownCell.swift; sourceTree = "<group>"; };
 		35C710C62B32CAC6004DBBC2 /* CustomDropDownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDropDownCell.xib; sourceTree = "<group>"; };
 		35C710C92B32F3F6004DBBC2 /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		35C710CA2B32F3F6004DBBC2 /* CustomAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlertViewController.xib; sourceTree = "<group>"; };
 		35C710CF2B331492004DBBC2 /* ReachabilitySwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilitySwift.swift; sourceTree = "<group>"; };
 		35C710D12B33151C004DBBC2 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		35D491CB2B3D9F5300A21215 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		35D491CD2B3D9F6400A21215 /* PasswordTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordTextField.xib; sourceTree = "<group>"; };
 		35D681EA2B32C84C00E0CD3F /* DropDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewController.swift; sourceTree = "<group>"; };
 		35D681EB2B32C84C00E0CD3F /* DropDownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownViewController.xib; sourceTree = "<group>"; };
 		35D93A3F2B3570FC00580CEC /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -443,7 +445,6 @@
 				35FA13082B34687500FEC83B /* Image+Extension.swift */,
 				35FA13102B34763600FEC83B /* Enumerations.swift */,
 				35FA13122B3476E100FEC83B /* Date+Extension.swift */,
-				35B8AA122B355E8C0012ABB3 /* ColorConfigure.swift */,
 				351C97242B3B01DA001D78E0 /* ThemeColor.swift */,
 				35E909CA2B3D4515002F9C02 /* AppStoryboard.swift */,
 				35E909CC2B3D558D002F9C02 /* UIFont+CustomFont.swift */,
@@ -598,6 +599,8 @@
 			children = (
 				35D97E742B3C00DB00F3C3F4 /* CustomTextField.swift */,
 				35D97E762B3C010400F3C3F4 /* CustomTextField.xib */,
+				35D491CB2B3D9F5300A21215 /* PasswordTextField.swift */,
+				35D491CD2B3D9F6400A21215 /* PasswordTextField.xib */,
 			);
 			path = ReuseableView;
 			sourceTree = "<group>";
@@ -829,6 +832,7 @@
 				35B090332B3193CE00CD765A /* Main.storyboard in Resources */,
 				356609162B3A8DFD00E7D872 /* PhotoLocationTableViewCell.xib in Resources */,
 				35D681ED2B32C84C00E0CD3F /* DropDownViewController.xib in Resources */,
+				35D491CE2B3D9F6400A21215 /* PasswordTextField.xib in Resources */,
 				35FA12FE2B344C2700FEC83B /* ProgressViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -911,7 +915,6 @@
 				35D93A712B3573B700580CEC /* FSCalendarStickyHeader.m in Sources */,
 				35D93A6C2B3573B700580CEC /* FSCalendarWeekdayView.m in Sources */,
 				35FA12FD2B344C2700FEC83B /* ProgressViewController.swift in Sources */,
-				35B8AA132B355E8C0012ABB3 /* ColorConfigure.swift in Sources */,
 				356609152B3A8DFD00E7D872 /* PhotoLocationTableViewCell.swift in Sources */,
 				35C710D02B331492004DBBC2 /* ReachabilitySwift.swift in Sources */,
 				35FA12F12B3425A200FEC83B /* GenderViewController.swift in Sources */,
@@ -922,6 +925,7 @@
 				35FA13092B34687500FEC83B /* Image+Extension.swift in Sources */,
 				35D93A652B3573B700580CEC /* FSCalendarHeaderView.m in Sources */,
 				35B090842B31C11000CD765A /* DPDKeyboardListener.swift in Sources */,
+				35D491CC2B3D9F5300A21215 /* PasswordTextField.swift in Sources */,
 				35B090302B3193CE00CD765A /* ViewController.swift in Sources */,
 				35B0902C2B3193CE00CD765A /* AppDelegate.swift in Sources */,
 				35FA130D2B3470AB00FEC83B /* DateCalendarTableViewCell.swift in Sources */,

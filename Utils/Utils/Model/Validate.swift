@@ -25,7 +25,13 @@ class Validate: NSObject {
     
     // MARK: - Age
     func ageCount(text: String) -> Bool {
-        return text.count == 2
+        return text.count == 3
+    }
+
+    func isDigitsAcceptDeleteBackSpace(text: String, maxLength : Int = 3) -> Bool {
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: text)
+        return allowedCharacters.isSuperset(of: characterSet) && text.count <= maxLength
     }
     
     // Helper methods for password validation

@@ -20,9 +20,9 @@ class ValidationTableViewCell: UITableViewCell {
     @IBOutlet weak var otpTextField: UITextField!
     
     @IBOutlet weak var pinCodeTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: PasswordTextField!
     
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: PasswordTextField!
     @IBOutlet weak var dropDownTextField: UITextField!
     
     @IBOutlet weak var dropDown: UIView!
@@ -36,13 +36,13 @@ class ValidationTableViewCell: UITableViewCell {
     }()
     
     @IBAction func dropDown(_ sender: Any) {
-        if let confirmText = confirmPasswordTextField.text, let passwordText = passwordTextField.text, confirmText == passwordText {
-            confirmPasswordTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
-        } else if let age = confirmPasswordTextField.text, age.count <= 0 {
+        if let confirmText = confirmPasswordTextField.textField.text, let passwordText = passwordTextField.textField.text, confirmText == passwordText {
+            confirmPasswordTextField.textField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+        } else if let age = confirmPasswordTextField.textField.text, age.count <= 0 {
             print("Empty details")
-            confirmPasswordTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+            confirmPasswordTextField.textField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
         } else {
-            confirmPasswordTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
+            confirmPasswordTextField.textField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
             delegate?.showAlert?(msg: "Confirm password doesnot match")
         }
         centeredDropDown.show()
@@ -58,16 +58,23 @@ class ValidationTableViewCell: UITableViewCell {
     }
 
     func setUI(with index: Int) {
+        passwordTextField.textField.isSecureTextEntry = true
+        confirmPasswordTextField.textField.isSecureTextEntry = true
         nameTextField.textField.delegate = self
         nameTextField.textField.backgroundColor = .white
+        passwordTextField.textField.backgroundColor = .white
+        confirmPasswordTextField.textField.backgroundColor = .white
         nameTextField.placeholderText = "Name"
+        passwordTextField.placeholderText = "Password"
+        confirmPasswordTextField.placeholderText = "Confirm Password"
         ageTextField.delegate = self
         mailTextField.delegate = self
         mobileTextField.delegate = self
         otpTextField.delegate = self
-        passwordTextField.delegate = self
-        confirmPasswordTextField.delegate = self
+        passwordTextField.textField.delegate = self
+        confirmPasswordTextField.textField.delegate = self
         pinCodeTextField.delegate = self
+        ageTextField.keyboardType = .numberPad
       //  textLabel?.text = self.currentList[indexPath.section].dataList[indexPath.row]
     }
     
@@ -114,8 +121,8 @@ class ValidationTableViewCell: UITableViewCell {
         mailTextField.text?.isEmpty ?? true &&
         mobileTextField.text?.isEmpty ?? true &&
         otpTextField.text?.isEmpty ?? true &&
-        passwordTextField.text?.isEmpty ?? true &&
-        confirmPasswordTextField.text?.isEmpty ?? true &&
+        passwordTextField.textField.text?.isEmpty ?? true &&
+        confirmPasswordTextField.textField.text?.isEmpty ?? true &&
         dropDownTextField.text?.isEmpty ?? true &&
         pinCodeTextField.text?.isEmpty ?? true
     }
@@ -197,24 +204,24 @@ extension ValidationTableViewCell: UITextFieldDelegate {
                 pinCodeTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
                 delegate?.showAlert?(msg: "Invalid Pin Code")
             }
-        case passwordTextField:
-            if let text = passwordTextField.text, validate.hasUpperCase(text), validate.hasNumber(text), validate.hasSymbol(text), text.count >= 8 {
-                passwordTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
-            } else if let age = passwordTextField.text, age.count <= 0 {
+        case passwordTextField.textField:
+            if let text = passwordTextField.textField.text, validate.hasUpperCase(text), validate.hasNumber(text), validate.hasSymbol(text), text.count >= 8 {
+                passwordTextField.textField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+            } else if let age = passwordTextField.textField.text, age.count <= 0 {
                 print("Empty details")
-                passwordTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+                passwordTextField.textField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else {
-                passwordTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
+                passwordTextField.textField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
                 delegate?.showAlert?(msg: "Invalid password")
             }
-        case confirmPasswordTextField:
-            if let confirmText = confirmPasswordTextField.text, let passwordText = passwordTextField.text, confirmText == passwordText {
-                confirmPasswordTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
-            } else if let age = confirmPasswordTextField.text, age.count <= 0 {
+        case confirmPasswordTextField.textField:
+            if let confirmText = confirmPasswordTextField.textField.text, let passwordText = passwordTextField.textField.text, confirmText == passwordText {
+                confirmPasswordTextField.textField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+            } else if let age = confirmPasswordTextField.textField.text, age.count <= 0 {
                 print("Empty details")
-                confirmPasswordTextField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
+                confirmPasswordTextField.textField.addBorderAndColor(color: .lightGray, width: 0.5, corner_radius: 5, clipsToBounds: true)
             } else {
-                confirmPasswordTextField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
+                confirmPasswordTextField.textField.addBorderAndColor(color: UIColor.red, width: 0.5, corner_radius: 5, clipsToBounds: true)
                 delegate?.showAlert?(msg: "Confirm password doesnot match")
             }
         default:
@@ -227,18 +234,18 @@ extension ValidationTableViewCell: UITextFieldDelegate {
         case mobileTextField:
             let currentText = textField.text ?? ""
             let newText = (currentText as NSString).replacingCharacters(in: range, with: string)
-            // Restrict the length to 10 or 11 digits
-            let allowedLength = 11  // Adjust as needed
-            if newText.count > allowedLength {
-                return false
-            }
-            // Allow only digits
-            let allowedCharacters = CharacterSet.decimalDigits
-            let characterSet = CharacterSet(charactersIn: string)
-            return allowedCharacters.isSuperset(of: characterSet)
+            return validate.isDigitsAcceptDeleteBackSpace(text: newText, maxLength: 10)
            // return validate.numberAllowedCharacteristics(text: string)
         case pinCodeTextField:
             return validate.pinCodeAllowedText(text: string)
+        case ageTextField:
+            let current = textField.text ?? ""
+            let new = (current as NSString).replacingCharacters(in: range, with: string)
+            return validate.isDigitsAcceptDeleteBackSpace(text: new)
+        case otpTextField:
+            let currentText = textField.text ?? ""
+            let newText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            return validate.isDigitsAcceptDeleteBackSpace(text: newText, maxLength: 4)
         default:
             return true
         }

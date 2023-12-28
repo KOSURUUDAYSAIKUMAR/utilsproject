@@ -32,4 +32,18 @@ extension ButtomSheetViewController: UITextViewDelegate {
             placeholderLabel.text = ""
         }
     }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            placeholderLabel.text = "Share your feedback ..!"
+            return false
+        }
+        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+        let numberOfChars = newText.count
+        if numberOfChars > 120 {
+            return false
+        }
+        placeholderLabel.text = ""
+        return true
+    }
 }

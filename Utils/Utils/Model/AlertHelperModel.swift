@@ -20,7 +20,7 @@ class AlertHelperModel: NSObject {
         viewController.present(alertController, animated: true, completion: nil)
     }
     
-    static func showAlertWithYesNo(title: String, message: String, viewController: UIViewController, yesAction: @escaping () -> Void, noAction: @escaping () -> Void) {
+    static func showAlertWithYesNo(title: String, message: String, button1: String = "Yes", noButton: String = "No", viewController: UIViewController, yesAction: @escaping () -> Void, noAction: @escaping () -> Void) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
             yesAction()

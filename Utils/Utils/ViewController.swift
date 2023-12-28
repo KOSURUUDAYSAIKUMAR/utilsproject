@@ -199,7 +199,6 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: BaseVCProtocol {
     func showAlert(msg: String) {
         AlertHelperModel.showAlert(title: "Utils", message: msg, viewController: self)
-        // self.showAlert(title: "Utils", message: msg)
     }
 }
 
@@ -215,7 +214,6 @@ extension ViewController: AlertDialogDelegate {
         switch tag {
         case 0:
             AlertHelperModel.showAlert(title: "Utils", message: currentList[1].dataList[tag], viewController: self)
-            // showAlert(title: "Utilis", message: currentList[1].dataList[tag])
         case 1:
             AlertHelperModel.showAlertWithYesNo(title: "Confirmation", message: "Do you want to proceed?", viewController: self) {
                 print("User tapped Yes")
@@ -236,7 +234,6 @@ extension ViewController: AlertDialogDelegate {
             popupViewController.modalPresentationStyle = .custom
             popupViewController.transitioningDelegate = self
             present(popupViewController, animated: true, completion: nil)
-           // showAlertWithImage(title: "Utilis", message: currentList[1].dataList[tag])
         case 4:
             let popupViewController = GenderViewController()
             popupViewController.delegate = self
@@ -251,7 +248,6 @@ extension ViewController: AlertDialogDelegate {
             present(popupViewController, animated: true, completion: nil)
         default:
             AlertHelperModel.showAlert(title: "Utils", message: currentList[1].dataList[tag], viewController: self)
-            // showAlert(title: "Utilis", message: currentList[1].dataList[tag])
         }
     }
     func alertButtonTagYN(tag: String) {

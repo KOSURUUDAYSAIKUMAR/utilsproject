@@ -31,15 +31,6 @@ extension Date {
 }
 
 extension DateFormate {
-    static func filterCases(startingWith prefix: String) -> [String] {
-        let filteredCases = DateFormate.allCases
-            .filter { $0.rawValue.lowercased().starts(with: prefix.lowercased()) }
-            .map { $0.rawValue }
-        return filteredCases
-    }
-}
-
-extension DateFormate {
     static func filterCases(startingWith prefix: String, caseSensitive: Bool = false) -> [String] {
         let filteredCases = DateFormate.allCases
             .filter {

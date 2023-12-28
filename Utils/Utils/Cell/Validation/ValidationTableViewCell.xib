@@ -71,22 +71,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDh-Oi-yhn">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ch-QI-RX1" customClass="PasswordTextField" customModule="Utils" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="323" width="334" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Yc0-Gy-ZNI"/>
+                                            <constraint firstAttribute="height" constant="45" id="9aI-ni-yGB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwR-4j-z6t">
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2en-ro-GGE" userLabel="Confirm Password Text Field" customClass="PasswordTextField" customModule="Utils" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="376" width="334" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="3Ng-gy-1Lc"/>
+                                            <constraint firstAttribute="height" constant="45" id="KDq-Rx-4oW"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tg0-rP-YMw">
                                         <rect key="frame" x="0.0" y="429" width="334" height="45"/>
                                         <subviews>
@@ -193,14 +191,14 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="ageTextField" destination="kqt-Hd-r3e" id="CS9-Tt-amD"/>
-                <outlet property="confirmPasswordTextField" destination="mwR-4j-z6t" id="3Xl-ee-xHR"/>
+                <outlet property="confirmPasswordTextField" destination="2en-ro-GGE" id="6Uj-Y8-C6k"/>
                 <outlet property="dropDown" destination="tg0-rP-YMw" id="Nm0-u5-YdJ"/>
                 <outlet property="dropDownTextField" destination="MTy-wS-huf" id="joG-vE-avk"/>
                 <outlet property="mailTextField" destination="SpY-Iv-B19" id="8YI-e3-byc"/>
                 <outlet property="mobileTextField" destination="MzK-K9-3rd" id="ckw-sE-bMJ"/>
                 <outlet property="nameTextField" destination="V4M-PA-GVf" id="CuW-rB-anP"/>
                 <outlet property="otpTextField" destination="GKu-Ro-8uL" id="mi0-yO-LJh"/>
-                <outlet property="passwordTextField" destination="WDh-Oi-yhn" id="OUY-0d-PZ5"/>
+                <outlet property="passwordTextField" destination="6Ch-QI-RX1" id="YgD-Zo-zrm"/>
                 <outlet property="pinCodeTextField" destination="aUo-Gr-0Hd" id="JsR-zK-3n1"/>
                 <outlet property="submitView" destination="8y1-Wx-vXc" id="ln9-zj-qPc"/>
             </connections>
@@ -210,10 +208,10 @@
     <resources>
         <image name="Disclosure_Arrow_1" width="9" height="6"/>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -118,25 +118,9 @@ extension CalendarViewController: FSCalendarDataSource {
     }
     
     func getLastMonthDate(preMonth: Int) -> Date? {
-        
-//        let calendar = Calendar.current
-//        var components = DateComponents()
-//        // Subtract one month from the current date
-//        components.month = -preMonth // -1
-//        // Get the first day of the month for the calculated date
-//        if let lastMonthDate = calendar.date(byAdding: components, to: Date()),
-//           let firstDayOfLastMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: lastMonthDate)) {
-//            return firstDayOfLastMonth
-//        }
-//        return nil
-        
-        
         let calendar = Calendar.current
-        // Get the first day of the current month
         let firstDayOfCurrentMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: Date()))!
-        // Calculate the previous month
         let previousMonth = calendar.date(byAdding: .month, value: -preMonth, to: firstDayOfCurrentMonth)!
-        // Get the first day of the previous month
         let firstDayOfPreviousMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: previousMonth))!
         return firstDayOfPreviousMonth
     }
